@@ -1,0 +1,43 @@
+<view class="page">
+  <view class="profile card">
+    <image class="avatar" src="{{userInfo.avatar || 'https://loremflickr.com/100/100/portrait?lock=950'}}" mode="aspectFill" />
+    <view wx:if="{{userInfo}}" style="flex:1;">
+      <view class="nick">{{userInfo.nickname}}</view>
+      <view class="phone">{{userInfo.phone}}</view>
+    </view>
+    <view wx:else style="flex:1;" bindtap="onLogin">
+      <view class="nick">点击登录</view>
+      <view class="phone">登录后同步订单/购物车/收藏</view>
+    </view>
+    <view wx:if="{{userInfo}}" bindtap="onLogout" class="logout">退出</view>
+  </view>
+
+  <view class="card order-entry" wx:if="{{userInfo}}">
+    <view style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20rpx;">
+      <text class="section-title" style="margin:0;">我的订单</text>
+      <text bindtap="go" data-url="/pages/orders/orders" style="color:#999;font-size:24rpx;">全部订单 ›</text>
+    </view>
+    <view class="stats">
+      <view class="stat" bindtap="go" data-url="/pages/orders/orders?status=0">
+        <text class="num">{{stats.waitPay || 0}}</text><text class="label">待付款</text>
+      </view>
+      <view class="stat" bindtap="go" data-url="/pages/orders/orders?status=1">
+        <text class="num">{{stats.waitShip || 0}}</text><text class="label">待发货</text>
+      </view>
+      <view class="stat" bindtap="go" data-url="/pages/orders/orders?status=2">
+        <text class="num">{{stats.waitReceive || 0}}</text><text class="label">待收货</text>
+      </view>
+      <view class="stat" bindtap="go" data-url="/pages/orders/orders?status=5">
+        <text class="num">{{stats.aftersale || 0}}</text><text class="label">售后</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="card menu" wx:if="{{userInfo}}">
+    <view class="menu-item" bindtap="go" data-url="/pages/favorites/favorites">我的收藏</view>
+    <view class="menu-item" bindtap="go" data-url="/pages/coupons/coupons">优惠券</view>
+    <view class="menu-item" bindtap="go" data-url="/pages/address/address">收货地址</view>
+    <view class="menu-item" bindtap="go" data-url="/pages/reviews/reviews">我的评价</view>
+    <view class="menu-item" style="border-bottom:none;" bindtap="go" data-url="/pages/profile/profile">个人资料</view>
+  </view>
+</view>

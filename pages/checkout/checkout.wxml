@@ -1,0 +1,52 @@
+<view class="page">
+  <view class="card addr">
+    <view class="addr-title">收货地址</view>
+    <view wx:if="{{addresses.length}}">
+      <view wx:for="{{addresses}}" wx:key="id" class="addr-item {{selectedAddress && selectedAddress.id === item.id ? 'on' : ''}}"
+            data-id="{{item.id}}" bindtap="selectAddress">
+        <view>
+          <text class="name">{{item.receiverName}}</text>
+          <text class="phone">{{item.receiverPhone}}</text>
+        </view>
+        <view class="detail">{{item.province}}{{item.city}}{{item.district}}{{item.detail}}</view>
+      </view>
+    </view>
+    <view wx:else class="empty">还没有收货地址，请先添加</view>
+    <view class="addr-ops">
+      <view class="add-addr" bindtap="goAddress">＋ 新增地址</view>
+      <view class="manage-addr" bindtap="goAddress">管理地址</view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">商品清单</view>
+    <view wx:for="{{items}}" wx:key="id" class="item">
+      <image class="img" src="{{item.mainImage}}" mode="aspectFill" />
+      <view style="flex:1;">
+        <view>{{item.goodsName}}</view>
+        <view class="sub">{{item.skuSpec}}</view>
+        <view class="price" style="margin-top:8rpx;">¥{{item.price}} × {{item.quantity}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">优惠券</view>
+    <view class="row" wx:for="{{coupons}}" wx:key="id" data-id="{{item.id}}" bindtap="selectCoupon"
+          style="{{selectedCoupon && selectedCoupon.id === item.id ? 'color:#ff5000;' : ''}}">
+      <text>{{item.name}}（满{{item.threshold}}减{{item.amount}}）</text>
+      <text wx:if="{{selectedCoupon && selectedCoupon.id === item.id}}">✓</text>
+    </view>
+    <view wx:if="{{!coupons.length}}" class="sub">暂无可用优惠券</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">备注</view>
+    <input class="input" placeholder="选填" bindinput="onRemark" />
+  </view>
+
+  <view class="footer">
+    <view class="pay">应付：<text class="price">¥{{payAmount}}</text></view>
+    <button class="btn-primary pay-btn" disabled="{{submitting}}" bindtap="submit">提交订单</button>
+  </view>
+</view>

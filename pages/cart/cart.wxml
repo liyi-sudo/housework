@@ -1,0 +1,28 @@
+<view class="page">
+  <view wx:if="{{!items.length}}" class="empty">
+    <text style="font-size:60rpx;">🛒</text>
+    <text style="margin-top:20rpx;color:#999;">购物车是空的</text>
+  </view>
+
+  <view class="card cart-item" wx:for="{{items}}" wx:key="id">
+    <checkbox checked="{{item.checked === 1}}" disabled="{{item.goodsStatus !== 1}}"
+              data-id="{{item.id}}" data-checked="{{item.checked === 1}}" bindtap="toggle" />
+    <image class="cart-img" src="{{item.mainImage}}" mode="aspectFill" />
+    <view style="flex:1;">
+      <view>{{item.goodsName}}</view>
+      <view class="sub">{{item.skuSpec}}</view>
+      <view wx:if="{{item.goodsStatus !== 1}}" class="sub">已失效</view>
+      <view class="qty">
+        <button size="mini" data-id="{{item.id}}" data-delta="-1" bindtap="changeQty">-</button>
+        <text>{{item.quantity}}</text>
+        <button size="mini" data-id="{{item.id}}" data-delta="1" bindtap="changeQty">+</button>
+      </view>
+    </view>
+    <view class="price">¥{{item.price}}</view>
+  </view>
+
+  <view class="footer" wx:if="{{items.length}}">
+    <view class="total">合计：<text class="price">¥{{total}}</text></view>
+    <button class="btn-primary pay-btn" bindtap="onCheckout">去结算</button>
+  </view>
+</view>

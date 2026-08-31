@@ -1,0 +1,46 @@
+<view class="page" wx:if="{{order}}">
+  <view class="card status-card">
+    <view class="status">{{order.statusText}}</view>
+    <view class="sub">{{order.status === 2 ? '商品正在配送中' : '订单已提交'}}</view>
+  </view>
+
+  <view class="card addr">
+    <view class="name">收货信息</view>
+    <view class="detail">{{order.addrSnapshot}}</view>
+  </view>
+
+  <view class="card">
+    <view class="section-title">商品信息</view>
+    <view wx:for="{{order.items}}" wx:key="id" class="item">
+      <image class="img" src="{{item.coverImage}}" mode="aspectFill" />
+      <view style="flex:1;">
+        <view>{{item.goodsName}}</view>
+        <view class="sub">{{item.skuSpec}}</view>
+        <view class="price" style="margin-top:8rpx;">¥{{item.price}} × {{item.quantity}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card info">
+    <view class="row"><text>订单编号</text><text>{{order.orderNo}}</text></view>
+    <view class="row"><text>下单时间</text><text>{{order.createdAt}}</text></view>
+    <view class="row"><text>支付方式</text><text>模拟余额</text></view>
+    <view class="row"><text>商品金额</text><text>¥{{order.totalAmount}}</text></view>
+    <view class="row"><text>优惠</text><text>-¥{{order.discount}}</text></view>
+    <view class="row"><text>运费</text><text>¥{{order.freight}}</text></view>
+    <view class="row total"><text>实付款</text><text class="price">¥{{order.payAmount}}</text></view>
+  </view>
+
+  <view class="card" wx:if="{{logistics}}">
+    <view class="section-title">物流跟踪</view>
+    <view class="sub">{{logistics.company}}：{{logistics.logisticsNo}}</view>
+    <view wx:for="{{logistics.traces}}" wx:key="*this" class="trace">{{item}}</view>
+  </view>
+
+  <view class="footer">
+    <button wx:if="{{order.status === 0}}" class="btn" bindtap="cancel">取消订单</button>
+    <button wx:if="{{order.status === 0}}" class="btn primary" bindtap="pay">立即支付</button>
+    <button wx:if="{{order.status === 2}}" class="btn primary" bindtap="confirm">确认收货</button>
+    <button wx:if="{{[1,2,3].indexOf(order.status) > -1}}" class="btn" bindtap="goAftersale">申请售后</button>
+  </view>
+</view>

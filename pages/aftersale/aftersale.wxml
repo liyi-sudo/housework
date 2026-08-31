@@ -1,0 +1,17 @@
+<view class="page">
+  <view class="card">
+    <view class="section-title">售后类型</view>
+    <picker range="{{types}}" value="{{typeIndex}}" bindchange="onTypeChange" class="picker">
+      <view class="row">{{types[typeIndex]}}<text>›</text></view>
+    </picker>
+    <view class="section-title" style="margin-top:30rpx;">申请原因</view>
+    <textarea class="reason" placeholder="请详细描述申请原因（必填）" bindinput="onReason" value="{{reason}}" />
+  </view>
+
+  <view class="tips">
+    * 售后申请提交后，商家将在 24 小时内处理
+    * 退款将原路退回支付账户（模拟）
+  </view>
+
+  <button class="btn-primary" disabled="{{submitting}}" bindtap="submit" style="height:88rpx;line-height:88rpx;">提交申请</button>
+</view>

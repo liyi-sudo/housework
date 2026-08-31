@@ -1,0 +1,40 @@
+<view class="page">
+  <view class="claimable-section">
+    <view class="section-title">可领取优惠券</view>
+    <view class="card coupon" wx:for="{{claimable}}" wx:key="id">
+      <view class="left">
+        <view class="amount">¥{{item.amount}}</view>
+        <view class="sub">{{item.name}}</view>
+        <view class="sub">满{{item.threshold}}可用</view>
+      </view>
+      <view class="right">
+        <view class="claim-btn {{item.claimed ? 'done' : ''}}" data-id="{{item.id}}" bindtap="claim">
+          {{item.claimed ? '已领取' : '领取'}}
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{!claimable.length}}" class="empty-sm">暂无可领取的优惠券</view>
+  </view>
+
+  <view class="tabs">
+    <view class="tab {{tab === 0 ? 'on' : ''}}" data-tab="0" bindtap="switchTab">未使用</view>
+    <view class="tab {{tab === 1 ? 'on' : ''}}" data-tab="1" bindtap="switchTab">已使用</view>
+  </view>
+
+  <view class="card coupon" wx:for="{{list}}" wx:key="id">
+    <view class="left">
+      <view class="amount">¥{{item.amount}}</view>
+      <view class="threshold">满{{item.threshold}}可用</view>
+      <view class="sub">{{item.name}}</view>
+      <view class="sub">有效期至：{{item.endTime}}</view>
+    </view>
+    <view class="right">
+      <text wx:if="{{item.status === 0}}">未使用</text>
+      <text wx:if="{{item.status === 1}}">已使用</text>
+    </view>
+  </view>
+
+  <view wx:if="{{!list.length}}" class="empty">
+    {{tab === 0 ? '暂无未使用优惠券' : '暂无已使用优惠券'}}
+  </view>
+</view>

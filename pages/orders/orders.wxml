@@ -1,0 +1,49 @@
+<view class="page">
+  <scroll-view scroll-x class="tabs">
+    <view wx:for="{{tabs}}" wx:key="value" class="tab {{active === item.value ? 'on' : ''}}"
+          data-value="{{item.value}}" bindtap="switchTab">{{item.label}}</view>
+  </scroll-view>
+
+  <view class="card order" wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" bindtap="goDetail">
+    <view class="head">
+      <text class="no">单号 {{item.orderNo}}</text>
+      <text class="status">{{item.statusText}}</text>
+    </view>
+    <view class="shop-line">
+      <text>{{item.shopName}}</text>
+      <text class="right-price">共{{item.items.length}}种商品</text>
+    </view>
+    <view class="logistics-line">
+      <text class="logistics-icon">🚚</text>
+      <text class="logistics-text">{{item.logisticsText}}</text>
+    </view>
+    <view class="body">
+      <view class="goods" wx:for="{{item.items}}" wx:for-item="it" wx:key="id">
+        <image class="img" src="{{it.coverImage}}" mode="aspectFill" />
+        <view class="g-info">
+          <view class="g-name">{{it.goodsName}}</view>
+          <view class="g-spec">{{it.skuSpec}}</view>
+          <view class="g-price">
+            <text class="price">¥{{it.price}}</text>
+            <text class="qty">×{{it.quantity}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="sum-line">
+      <text class="sum-label">实付款</text>
+      <text class="price">¥{{item.payAmount}}</text>
+    </view>
+    <view class="ops" catchtap="noop">
+      <view wx:if="{{item.status === 0}}" class="op-group">
+        <button size="mini" class="btn" data-id="{{item.id}}" catchtap="cancel">取消</button>
+        <button size="mini" class="btn primary" data-id="{{item.id}}" catchtap="pay">支付</button>
+      </view>
+      <view wx:if="{{item.status === 2}}" class="op-group">
+        <button size="mini" class="btn primary" data-id="{{item.id}}" catchtap="confirm">确认收货</button>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{!list.length}}" class="empty">暂无订单</view>
+</view>

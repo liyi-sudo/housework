@@ -1,0 +1,9 @@
+<view class="page">
+  <view class="card form">
+    <input class="input" type="number" maxlength="11" placeholder="手机号" data-field="phone" bindinput="onInput" />
+    <input class="input" placeholder="昵称（选填）" data-field="nickname" bindinput="onInput" />
+    <input class="input" password placeholder="密码（至少6位）" data-field="password" bindinput="onInput" />
+    <input class="input pwd" password placeholder="确认密码" data-field="confirm" bindinput="onInput" />
+    <button class="btn-primary" disabled="{{loading}}" bindtap="doRegister">{{loading ? '注册中...' : '注册'}}</button>
+  </view>
+</view>

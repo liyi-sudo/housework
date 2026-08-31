@@ -1,0 +1,140 @@
+.page {
+  padding: 24rpx 24rpx 120rpx;
+}
+.tabs {
+  white-space: nowrap;
+  margin-bottom: 20rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 16rpx;
+}
+.tab {
+  display: inline-block;
+  padding: 12rpx 24rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+.tab.on {
+  color: #ff5000;
+  font-weight: 700;
+  border-bottom: 4rpx solid #ff5000;
+}
+.order .head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+.no {
+  color: #999;
+  font-size: 22rpx;
+}
+.status {
+  color: #ff5000;
+  font-weight: 700;
+}
+.shop-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12rpx 0;
+  font-size: 26rpx;
+  color: #333;
+}
+.right-price {
+  color: #999;
+  font-size: 22rpx;
+}
+.logistics-line {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  padding: 8rpx 0 4rpx;
+  border-top: 1rpx solid #f5f5f5;
+}
+.logistics-icon {
+  font-size: 24rpx;
+}
+.logistics-text {
+  font-size: 24rpx;
+  color: #666;
+}
+.body {
+  padding: 8rpx 0;
+}
+.goods {
+  display: flex;
+  gap: 20rpx;
+  padding: 16rpx 0;
+  border-top: 1rpx solid #f5f5f5;
+}
+.img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+  background: #f7f7f7;
+  flex-shrink: 0;
+}
+.g-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.g-name {
+  font-size: 28rpx;
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.g-spec {
+  color: #999;
+  font-size: 24rpx;
+}
+.g-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.qty {
+  color: #999;
+  font-size: 24rpx;
+}
+.sum-line {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16rpx;
+  padding: 16rpx 0 8rpx;
+  border-top: 1rpx solid #f5f5f5;
+}
+.sum-label {
+  color: #666;
+  font-size: 24rpx;
+}
+.ops {
+  display: flex;
+  justify-content: flex-end;
+}
+.op-group {
+  display: flex;
+  gap: 16rpx;
+}
+.btn {
+  border: 1rpx solid #ddd;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+  padding: 0 24rpx;
+  background: #fff;
+}
+.btn.primary {
+  background: #ff5000;
+  color: #fff;
+  border-color: #ff5000;
+}
+.empty {
+  text-align: center;
+  color: #999;
+  padding: 120rpx 0;
+}

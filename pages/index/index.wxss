@@ -1,0 +1,141 @@
+.page {
+  padding: 24rpx;
+}
+.search-bar {
+  margin-bottom: 20rpx;
+}
+.search-input {
+  background: #fff;
+  border-radius: 40rpx;
+  padding: 18rpx 30rpx;
+  font-size: 28rpx;
+}
+.notice {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 16rpx 24rpx;
+  margin-bottom: 20rpx;
+}
+.notice-tag {
+  flex-shrink: 0;
+  background: #ff5000;
+  color: #fff;
+  font-size: 22rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 6rpx;
+  margin-right: 16rpx;
+}
+.notice-body {
+  flex: 1;
+  min-width: 0;
+}
+.notice-content {
+  font-size: 26rpx;
+  color: #555;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(6rpx);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.notice-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.banner {
+  height: 320rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+.banner-img {
+  width: 100%;
+  height: 100%;
+}
+.cat-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 10rpx;
+}
+.cat-item {
+  width: 20%;
+  text-align: center;
+  margin: 16rpx 0;
+}
+.cat-avatar {
+  width: 88rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 50%;
+  background: #fff3ee;
+  color: #ff5000;
+  font-size: 34rpx;
+  font-weight: 700;
+  margin: 0 auto 10rpx;
+}
+.cat-name {
+  font-size: 24rpx;
+}
+.coupon-strip {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  padding: 24rpx 28rpx;
+  margin-bottom: 20rpx;
+  background: linear-gradient(90deg, #fff7f3, #fff);
+}
+.coupon-icon {
+  width: 56rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  border-radius: 50%;
+  background: #ff5000;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.coupon-text {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #ff5000;
+}
+.coupon-btn {
+  margin-left: auto;
+  padding: 8rpx 26rpx;
+  border: 2rpx solid #ff5000;
+  color: #ff5000;
+  border-radius: 32rpx;
+  font-size: 26rpx;
+}
+.goods-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.goods-item {
+  width: 48%;
+  margin-bottom: 24rpx;
+}
+.goods-img {
+  width: 100%;
+  height: 340rpx;
+  border-radius: 12rpx;
+  background: #f7f7f7;
+}
+.goods-name {
+  font-size: 26rpx;
+  margin: 10rpx 0 6rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.price {
+  font-size: 32rpx;
+}

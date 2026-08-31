@@ -1,0 +1,20 @@
+<view class="page" wx:if="{{auth}}">
+  <view class="card" wx:for="{{list}}" wx:key="id" data-id="{{item.goodsId}}" bindtap="goDetail">
+    <image class="img" src="{{item.mainImage}}" mode="aspectFill" />
+    <view style="flex:1;">
+      <view class="name">{{item.goodsName}}</view>
+      <view class="sub">{{item.shopName}}</view>
+      <view class="price-bar">
+        <text class="price">¥{{item.price}}</text>
+        <text class="del" data-id="{{item.id}}" catchtap="unfav">取消收藏</text>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{!list.length}}" class="empty">暂无收藏</view>
+</view>
+
+<view class="page" wx:else>
+  <view class="empty">请先登录</view>
+  <button class="btn-primary" style="width:60%;display:block;margin:0 auto;height:88rpx;line-height:88rpx;"
+          bindtap="goLogin">去登录</button>
+</view>

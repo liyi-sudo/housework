@@ -1,0 +1,81 @@
+<view class="page">
+  <swiper class="gallery" indicator-dots circular wx:if="{{goods}}">
+    <swiper-item wx:for="{{imagesArray}}" wx:key="*this">
+      <image class="gallery-img" src="{{item}}" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+
+  <view class="card info" wx:if="{{goods}}">
+    <view class="price pad">¥{{selectedSku ? selectedSku.price : goods.price}}</view>
+    <view class="title">{{goods.name}}</view>
+    <view class="sub" wx:if="{{goods.subtitle}}">{{goods.subtitle}}</view>
+    <view class="meta">已售 {{goods.sales}} 件 · {{goods.shopName}}</view>
+  </view>
+
+  <view class="card sku" wx:if="{{skuList.length}}">
+    <view class="section-title">选择规格</view>
+    <view class="sku-list">
+      <view wx:for="{{skuList}}" wx:key="id" class="sku {{selectedSku.id === item.id ? 'on' : ''}}"
+            data-id="{{item.id}}" bindtap="selectSku">
+        {{item.spec}}（¥{{item.price}}）
+      </view>
+    </view>
+  </view>
+
+  <view class="card reviews">
+    <view class="review-head">
+      <view class="section-title" style="margin:0;">商品评价（{{reviews.length}}）</view>
+      <view class="write-review" bindtap="openReview">写评价</view>
+    </view>
+    <view wx:for="{{reviews}}" wx:key="id" class="review">
+      <view>
+        <text class="nick">{{item.nickname || '匿名'}}</text>
+        <text style="color:#ff8000;margin-left:12rpx;">{{item.starText}}</text>
+      </view>
+      <view class="content">{{item.content}}</view>
+      <view class="sub" wx:if="{{item.reply}}">商家回复：{{item.reply}}</view>
+    </view>
+    <view wx:if="{{!reviews.length}}" class="empty">暂无评价</view>
+  </view>
+
+  <view class="footer">
+    <view class="fav" bindtap="toggleFav">
+      <text style="font-size:40rpx;">{{isFav ? '♥' : '♡'}}</text>
+      <text class="fav-text">{{isFav ? '已收藏' : '收藏'}}</text>
+    </view>
+    <button class="btn-plain cart-btn" data-mode="cart" bindtap="showSheet">加入购物车</button>
+    <button class="btn-primary buy-btn" data-mode="buy" bindtap="showSheet">立即购买</button>
+  </view>
+
+  <view class="sheet" wx:if="{{sheetVisible}}" bindtap="hideSheet">
+    <view class="sheet-body" catchtap="stopProp">
+      <view class="price" style="font-size:40rpx;">¥{{selectedSku ? selectedSku.price : ''}}</view>
+      <view class="sku-list">
+        <view wx:for="{{skuList}}" wx:key="id" class="sku {{selectedSku.id === item.id ? 'on' : ''}}"
+              data-id="{{item.id}}" bindtap="selectSku">
+          {{item.spec}}
+        </view>
+      </view>
+      <view class="qty-row">
+        <text>数量</text>
+        <button size="mini" data-delta="-1" bindtap="changeQty">-</button>
+        <text>{{quantity}}</text>
+        <button size="mini" data-delta="1" bindtap="changeQty">+</button>
+      </view>
+      <button class="btn-primary sheet-ok" bindtap="confirmSheet">确认</button>
+    </view>
+  </view>
+
+  <view class="mask" wx:if="{{reviewVisible}}" bindtap="closeReview">
+    <view class="review-form" catchtap="stopProp">
+      <view class="review-title">评价商品</view>
+      <view class="rating-row">
+        <text wx:for="{{[1,2,3,4,5]}}" wx:key="*this" class="star {{item <= reviewRating ? 'on' : ''}}"
+              data-value="{{item}}" bindtap="setRating">★</text>
+      </view>
+      <textarea class="review-textarea" placeholder="分享您的使用体验（必填）" value="{{reviewContent}}"
+                bindinput="onReviewContent" maxlength="200" />
+      <button class="btn-primary review-ok" bindtap="submitReview">提交评价</button>
+    </view>
+  </view>
+</view>
