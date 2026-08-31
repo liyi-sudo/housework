@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecommerce.mapper.CouponMapper">
+
+    <select id="selectClaimable" resultType="Coupon">
+        SELECT * FROM coupon
+        WHERE status = 1
+          AND (total = 0 OR received &lt; total)
+          AND (start_time IS NULL OR start_time &lt;= NOW())
+          AND (end_time IS NULL OR end_time &gt;= NOW())
+        ORDER BY amount DESC
+    </select>
+
+    <select id="selectById" resultType="Coupon">
+        SELECT * FROM coupon WHERE id = #{id}
+    </select>
+
+    <update id="incrementReceived">
+        UPDATE coupon SET received = received + 1 WHERE id = #{id}
+    </update>
+
+    <update id="incrementReceivedLimit">
+        UPDATE coupon SET received = received + 1 WHERE id = #{id} AND (total = 0 OR received &lt; total)
+    </update>
+
+    <select id="selectPage" resultType="Coupon">
+        SELECT * FROM coupon
+        <where>
+            <if test="keyword != null and keyword != ''">AND name LIKE CONCAT('%', #{keyword}, '%')</if>
+            <if test="status != null">AND status = #{status}</if>
+        </where>
+        ORDER BY id DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="countPage" resultType="long">
+        SELECT COUNT(*) FROM coupon
+        <where>
+            <if test="keyword != null and keyword != ''">AND name LIKE CONCAT('%', #{keyword}, '%')</if>
+            <if test="status != null">AND status = #{status}</if>
+        </where>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO coupon (name, threshold, amount, total, received, start_time, end_time, status)
+        VALUES (#{name}, #{threshold}, #{amount}, #{total}, 0, #{startTime}, #{endTime}, #{status})
+    </insert>
+
+    <update id="update">
+        UPDATE coupon SET name = #{name}, threshold = #{threshold}, amount = #{amount},
+                          total = #{total}, start_time = #{startTime}, end_time = #{endTime}, status = #{status}
+        WHERE id = #{id}
+    </update>
+
+    <update id="updateStatus">
+        UPDATE coupon SET status = #{status} WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM coupon WHERE id = #{id}
+    </delete>
+</mapper>

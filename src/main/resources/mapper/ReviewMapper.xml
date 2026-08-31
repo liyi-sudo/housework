@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecommerce.mapper.ReviewMapper">
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO review (user_id, order_item_id, goods_id, shop_id, rating, content, images)
+        VALUES (#{userId}, #{orderItemId}, #{goodsId}, #{shopId}, #{rating}, #{content}, #{images})
+    </insert>
+
+    <select id="selectByGoodsId" resultType="Review">
+        SELECT r.*, u.nickname, u.avatar
+        FROM review r LEFT JOIN user u ON r.user_id = u.id
+        WHERE r.goods_id = #{goodsId}
+        ORDER BY r.create_time DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="selectByUser" resultType="Review">
+        SELECT r.* FROM review r WHERE r.user_id = #{userId} ORDER BY r.create_time DESC
+    </select>
+
+    <select id="countByGoodsId" resultType="int">
+        SELECT COUNT(*) FROM review WHERE goods_id = #{goodsId}
+    </select>
+
+    <select id="selectByShop" resultType="Review">
+        SELECT r.*, g.name AS goodsName, u.nickname
+        FROM review r
+        LEFT JOIN goods g ON r.goods_id = g.id
+        LEFT JOIN user u ON r.user_id = u.id
+        WHERE r.shop_id = #{shopId}
+        ORDER BY r.create_time DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="countByShop" resultType="int">
+        SELECT COUNT(*) FROM review WHERE shop_id = #{shopId}
+    </select>
+
+    <update id="updateReply">
+        UPDATE review SET reply = #{content}
+        WHERE id = #{id} AND shop_id = #{shopId}
+    </update>
+
+    <select id="selectByOrderItemId" resultType="Review">
+        SELECT * FROM review WHERE order_item_id = #{orderItemId} AND user_id = #{userId} ORDER BY id LIMIT 1
+    </select>
+
+    <update id="updateFollowUp">
+        UPDATE review SET content = #{content}, images = #{images} WHERE id = #{id}
+    </update>
+
+    <select id="selectRatingStatsByShop" resultType="map">
+        SELECT COALESCE(AVG(rating), 0) AS avgRating,
+               COALESCE(SUM(CASE WHEN rating &gt;= 4 THEN 1 ELSE 0 END), 0) AS positiveCount,
+               COUNT(*) AS total
+        FROM review
+        WHERE shop_id = #{shopId}
+    </select>
+</mapper>

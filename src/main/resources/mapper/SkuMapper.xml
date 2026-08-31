@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecommerce.mapper.SkuMapper">
+
+    <select id="selectByGoodsId" resultType="Sku">
+        SELECT * FROM sku WHERE goods_id = #{goodsId} ORDER BY id
+    </select>
+
+    <select id="selectById" resultType="Sku">
+        SELECT * FROM sku WHERE id = #{id}
+    </select>
+
+    <update id="reduceStock">
+        UPDATE sku SET stock = stock - #{n} WHERE id = #{id} AND stock &gt;= #{n}
+    </update>
+
+    <insert id="insertBatch">
+        INSERT INTO sku (goods_id, spec, price, stock, image) VALUES
+        <foreach collection="list" item="s" separator=",">
+            (#{s.goodsId}, #{s.spec}, #{s.price}, #{s.stock}, #{s.image})
+        </foreach>
+    </insert>
+
+    <delete id="deleteByGoodsId">
+        DELETE FROM sku WHERE goods_id = #{goodsId}
+    </delete>
+
+    <select id="countLowStockByShop" resultType="int">
+        SELECT COUNT(DISTINCT sk.goods_id)
+        FROM sku sk JOIN goods g ON sk.goods_id = g.id
+        WHERE g.shop_id = #{shopId} AND g.status = 1 AND sk.stock &lt;= #{threshold}
+    </select>
+</mapper>
