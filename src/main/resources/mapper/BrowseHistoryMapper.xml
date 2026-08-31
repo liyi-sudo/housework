@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecommerce.mapper.BrowseHistoryMapper">
+
+    <insert id="insert">
+        INSERT INTO browse_history (user_id, goods_id) VALUES (#{userId}, #{goodsId})
+    </insert>
+
+    <select id="selectByUser" resultType="BrowseHistory">
+        SELECT b.id, b.goods_id, b.create_time,
+               g.name AS goods_name, g.main_image, g.price, g.status
+        FROM browse_history b
+        JOIN goods g ON b.goods_id = g.id
+        WHERE b.user_id = #{userId}
+        ORDER BY b.create_time DESC
+        LIMIT #{limit}
+    </select>
+
+    <delete id="deleteByUser">
+        DELETE FROM browse_history WHERE user_id = #{userId}
+    </delete>
+</mapper>

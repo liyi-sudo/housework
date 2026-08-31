@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecommerce.mapper.UserCouponMapper">
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user_coupon (user_id, coupon_id, status)
+        VALUES (#{userId}, #{couponId}, 0)
+    </insert>
+
+    <select id="selectByUser" resultType="UserCoupon">
+        SELECT u.*, c.name, c.threshold, c.amount, c.end_time
+        FROM user_coupon u JOIN coupon c ON u.coupon_id = c.id
+        WHERE u.user_id = #{userId}
+        <if test="status != null">
+            AND u.status = #{status}
+        </if>
+        ORDER BY u.receive_time DESC
+    </select>
+
+    <select id="selectById" resultType="UserCoupon">
+        SELECT u.*, c.name, c.threshold, c.amount, c.end_time
+        FROM user_coupon u JOIN coupon c ON u.coupon_id = c.id
+        WHERE u.id = #{id} AND u.user_id = #{userId}
+    </select>
+
+    <update id="markUsed">
+        UPDATE user_coupon SET status = 1, use_time = NOW(), order_id = #{orderId}
+        WHERE id = #{id} AND status = 0
+    </update>
+
+    <select id="countByUserAndCoupon" resultType="int">
+        SELECT COUNT(*) FROM user_coupon WHERE user_id = #{userId} AND coupon_id = #{couponId}
+    </select>
+
+    <select id="selectClaimedCouponIds" resultType="long">
+        SELECT DISTINCT coupon_id FROM user_coupon WHERE user_id = #{userId}
+    </select>
+</mapper>

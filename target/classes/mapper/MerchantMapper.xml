@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecommerce.mapper.MerchantMapper">
+    <select id="selectByAccount" resultType="Merchant">
+        SELECT * FROM merchant WHERE account = #{account}
+    </select>
+    <select id="selectById" resultType="Merchant">
+        SELECT * FROM merchant WHERE id = #{id}
+    </select>
+    <select id="selectPage" resultType="Merchant">
+        SELECT m.*, s.name AS shop_name
+        FROM merchant m LEFT JOIN shop s ON m.id = s.merchant_id
+        <where>
+            <if test="keyword != null and keyword != ''">
+                AND (m.account LIKE CONCAT('%', #{keyword}, '%') OR m.contact_name LIKE CONCAT('%', #{keyword}, '%'))
+            </if>
+            <if test="status != null">AND m.status = #{status}</if>
+        </where>
+        ORDER BY m.create_time DESC
+        LIMIT #{offset}, #{size}
+    </select>
+    <select id="countPage" resultType="long">
+        SELECT COUNT(*) FROM merchant m
+        <where>
+            <if test="keyword != null and keyword != ''">
+                AND (m.account LIKE CONCAT('%', #{keyword}, '%') OR m.contact_name LIKE CONCAT('%', #{keyword}, '%'))
+            </if>
+            <if test="status != null">AND m.status = #{status}</if>
+        </where>
+    </select>
+    <update id="updateStatus">
+        UPDATE merchant SET status = #{status} WHERE id = #{id}
+    </update>
+</mapper>

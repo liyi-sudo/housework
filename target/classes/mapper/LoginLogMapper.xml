@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecommerce.mapper.LoginLogMapper">
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO login_log (username, user_type, client, ip, result, message)
+        VALUES (#{username}, #{userType}, #{client}, #{ip}, #{result}, #{message})
+    </insert>
+
+    <sql id="log_where">
+        <where>
+            <if test="username != null and username != ''">AND username LIKE CONCAT('%', #{username}, '%')</if>
+            <if test="userType != null and userType != ''">AND user_type = #{userType}</if>
+            <if test="client != null and client != ''">AND client = #{client}</if>
+            <if test="result != null and result != ''">AND result = #{result}</if>
+        </where>
+    </sql>
+
+    <select id="selectPage" resultType="LoginLog">
+        SELECT * FROM login_log
+        <include refid="log_where"/>
+        ORDER BY create_time DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="countPage" resultType="long">
+        SELECT COUNT(*) FROM login_log
+        <include refid="log_where"/>
+    </select>
+</mapper>

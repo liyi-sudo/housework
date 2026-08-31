@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecommerce.mapper.CartMapper">
+
+    <resultMap id="CartVO" type="Cart" autoMapping="true">
+        <id property="id" column="id"/>
+        <result property="goodsName" column="goods_name"/>
+        <result property="mainImage" column="main_image"/>
+        <result property="skuSpec" column="sku_spec"/>
+        <result property="price" column="price"/>
+        <result property="stock" column="stock"/>
+        <result property="goodsStatus" column="goods_status"/>
+        <result property="shopId" column="shop_id"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+    <sql id="cart_join">
+        SELECT c.*, g.name AS goods_name, g.main_image, g.status AS goods_status,
+               g.shop_id, sk.spec AS sku_spec, sk.price, sk.stock
+        FROM cart c
+        JOIN goods g ON c.goods_id = g.id
+        JOIN sku sk ON c.sku_id = sk.id
+    </sql>
+
+    <select id="selectByUserId" resultMap="CartVO">
+        <include refid="cart_join"/>
+        WHERE c.user_id = #{userId}
+        ORDER BY c.id DESC
+    </select>
+
+    <select id="selectById" resultMap="CartVO">
+        <include refid="cart_join"/>
+        WHERE c.id = #{id}
+    </select>
+
+    <select id="selectByUserAndSku" resultType="Cart">
+        SELECT * FROM cart WHERE user_id = #{userId} AND sku_id = #{skuId} LIMIT 1
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO cart (user_id, goods_id, sku_id, quantity, checked)
+        VALUES (#{userId}, #{goodsId}, #{skuId}, #{quantity}, #{checked})
+    </insert>
+
+    <update id="updateQuantity">
+        UPDATE cart SET quantity = #{quantity} WHERE id = #{id} AND user_id = #{userId}
+    </update>
+
+    <update id="updateChecked">
+        UPDATE cart SET checked = #{checked} WHERE user_id = #{userId}
+        <if test="ids != null and ids.size() > 0">
+            AND id IN
+            <foreach collection="ids" item="id" open="(" separator="," close=")">#{id}</foreach>
+        </if>
+    </update>
+
+    <delete id="deleteByUserAndId">
+        DELETE FROM cart WHERE user_id = #{userId} AND id = #{id}
+    </delete>
+
+    <select id="selectCheckoutItems" resultMap="CartVO">
+        <include refid="cart_join"/>
+        WHERE c.user_id = #{userId} AND c.checked = 1
+        <if test="ids != null and ids.size() > 0">
+            AND c.id IN
+            <foreach collection="ids" item="id" open="(" separator="," close=")">#{id}</foreach>
+        </if>
+        ORDER BY c.id
+    </select>
+</mapper>
