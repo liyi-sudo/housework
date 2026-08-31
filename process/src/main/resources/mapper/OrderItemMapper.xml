@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecommerce.mapper.OrderItemMapper">
+
+    <insert id="insertBatch" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO order_item (order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status)
+        VALUES
+        <foreach collection="items" item="it" separator=",">
+            (#{it.orderId}, #{it.goodsId}, #{it.goodsName}, #{it.skuId}, #{it.skuSpec},
+             #{it.coverImage}, #{it.price}, #{it.quantity}, 0)
+        </foreach>
+    </insert>
+
+    <select id="selectByOrderId" resultType="OrderItem">
+        SELECT * FROM order_item WHERE order_id = #{orderId}
+    </select>
+
+    <select id="selectById" resultType="OrderItem">
+        SELECT * FROM order_item WHERE id = #{id}
+    </select>
+
+    <select id="selectReviewableByUserAndGoods" resultType="OrderItem">
+        SELECT oi.* FROM order_item oi
+        JOIN orders o ON oi.order_id = o.id
+        WHERE o.user_id = #{userId} AND o.status = 3 AND oi.goods_id = #{goodsId} AND oi.review_status = 0
+        ORDER BY o.finish_time DESC
+        LIMIT 1
+    </select>
+
+    <select id="selectByGoodsAndUser" resultType="OrderItem">
+        SELECT oi.* FROM order_item oi
+        JOIN orders o ON oi.order_id = o.id
+        WHERE o.user_id = #{userId} AND oi.goods_id = #{goodsId}
+        ORDER BY o.finish_time DESC
+        LIMIT 1
+    </select>
+
+    <update id="updateReviewStatus">
+        UPDATE order_item SET review_status = 1 WHERE id = #{orderItemId}
+    </update>
+
+    <select id="selectGoodsSalesTop" resultType="map">
+        SELECT oi.goods_id AS goodsId,
+               oi.goods_name AS goodsName,
+               SUM(oi.quantity) AS qty,
+               COALESCE(SUM(oi.price * oi.quantity), 0) AS amount
+        FROM order_item oi
+        JOIN orders o ON oi.order_id = o.id
+        WHERE o.shop_id = #{shopId} AND o.status IN (1, 2, 3, 5)
+        GROUP BY oi.goods_id, oi.goods_name
+        ORDER BY qty DESC
+        LIMIT #{top}
+    </select>
+
+    <select id="selectCategoryShare" resultType="map">
+        SELECT c.id AS categoryId,
+               COALESCE(c.name, '未分类') AS categoryName,
+               COALESCE(SUM(oi.price * oi.quantity), 0) AS amount
+        FROM order_item oi
+        JOIN orders o ON oi.order_id = o.id
+        JOIN goods g ON oi.goods_id = g.id
+        LEFT JOIN category c ON g.category_id = c.id
+        WHERE o.shop_id = #{shopId} AND o.status IN (1, 2, 3, 5)
+        GROUP BY c.id, c.name
+    </select>
+</mapper>
