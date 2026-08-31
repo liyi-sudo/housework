@@ -1,0 +1,2238 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.ecommerce:ecommerce-platform >------------------
+[INFO] Building ecommerce-platform 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.5:run (default-cli) > test-compile @ ecommerce-platform >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ecommerce-platform ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 23 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ ecommerce-platform ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ecommerce-platform ---
+[INFO] skip non existing resourceDirectory D:\homework\研0\高级程序设计\大作业\process\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ ecommerce-platform ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ ecommerce-platform <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.5:run (default-cli) @ ecommerce-platform ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-08-31T01:26:28.201+08:00  INFO 18764 --- [ecommerce-platform] [           main] com.ecommerce.EcommerceApplication       : Starting EcommerceApplication using Java 17.0.20.1 with PID 18764 (D:\homework\研0\高级程序设计\大作业\process\target\classes started by JXGM in D:\homework\研0\高级程序设计\大作业\process)
+2026-08-31T01:26:28.202+08:00 DEBUG 18764 --- [ecommerce-platform] [           main] com.ecommerce.EcommerceApplication       : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-08-31T01:26:28.203+08:00  INFO 18764 --- [ecommerce-platform] [           main] com.ecommerce.EcommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-31T01:26:28.832+08:00  INFO 18764 --- [ecommerce-platform] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-31T01:26:28.842+08:00  INFO 18764 --- [ecommerce-platform] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-31T01:26:28.842+08:00  INFO 18764 --- [ecommerce-platform] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-08-31T01:26:28.895+08:00  INFO 18764 --- [ecommerce-platform] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-31T01:26:28.896+08:00  INFO 18764 --- [ecommerce-platform] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 665 ms
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+2026-08-31T01:26:29.419+08:00  INFO 18764 --- [ecommerce-platform] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-08-31T01:26:29.425+08:00  INFO 18764 --- [ecommerce-platform] [           main] com.ecommerce.EcommerceApplication       : Started EcommerceApplication in 1.466 seconds (process running for 1.652)
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b217690] was not registered for synchronization because synchronization is not active
+2026-08-31T01:26:29.438+08:00  INFO 18764 --- [ecommerce-platform] [   scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-31T01:26:29.531+08:00  INFO 18764 --- [ecommerce-platform] [   scheduling-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12255bfe
+2026-08-31T01:26:29.532+08:00  INFO 18764 --- [ecommerce-platform] [   scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+JDBC Connection [HikariProxyConnection@1263247898 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b217690]
+2026-08-31T01:26:38.608+08:00  INFO 18764 --- [ecommerce-platform] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-31T01:26:38.608+08:00  INFO 18764 --- [ecommerce-platform] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-31T01:26:38.609+08:00  INFO 18764 --- [ecommerce-platform] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7732921f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@941023932 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM shop WHERE merchant_id = ? LIMIT 1
+==> Parameters: 1(Long)
+<==    Columns: id, merchant_id, name, logo, banner, intro, status, create_time
+<==        Row: 1, 1, 优选数码旗舰店, https://img.alicdn.com/logo.png, , 正品数码，七天无理由, 1, 2026-08-30 01:59:50
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7732921f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d4597c5] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1509137540 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d4597c5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c7e43d1] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@759600388 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ? AND g.status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c7e43d1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f31d5e6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1367302426 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND create_time >= CURRENT_DATE
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f31d5e6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@383546c6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1239038659 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(SUM(pay_amount), 0) FROM orders WHERE shop_id = ? AND status IN (1, 2, 3, 5)
+==> Parameters: 1(Long)
+<==    Columns: COALESCE(SUM(pay_amount), 0)
+<==        Row: 2963.00
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@383546c6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60873ca4] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1022779530 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND status = ?
+==> Parameters: 1(Long), 0(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60873ca4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2539c138] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2088938279 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 3
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2539c138]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36b50279] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1575892374 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND status = ?
+==> Parameters: 1(Long), 2(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36b50279]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c846f18] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@72251469 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM aftersale WHERE shop_id = ? AND status = 0
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c846f18]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@286352fe] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@922752069 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(DISTINCT sk.goods_id) FROM sku sk JOIN goods g ON sk.goods_id = g.id WHERE g.shop_id = ? AND g.status = 1 AND sk.stock <= ?
+==> Parameters: 1(Long), 20(Integer)
+<==    Columns: COUNT(DISTINCT sk.goods_id)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@286352fe]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@80ef7b7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1899076981 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock FROM goods g JOIN shop s ON g.shop_id = s.id LEFT JOIN sku sk ON g.id = sk.goods_id GROUP BY g.id ORDER BY g.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, shop_id, category_id, name, subtitle, main_image, images, detail, price, sales, status, create_time, shop_name, stock
+<==        Row: 1, 1, 1, 无线蓝牙耳机 Pro, 主动降噪 / 30小时续航, https://picsum.photos/seed/g1/600/600, <<BLOB>>, <<BLOB>>, 199.00, 328, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 212
+<==        Row: 2, 1, 1, 智能手环 6代, 血氧监测 / 14天续航, https://picsum.photos/seed/g2/600/600, <<BLOB>>, <<BLOB>>, 149.00, 561, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 229
+<==        Row: 3, 1, 1, 便携充电宝 20000mAh, 22.5W快充 / 大容量, https://picsum.photos/seed/g3/600/600, <<BLOB>>, <<BLOB>>, 99.00, 890, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 200
+<==        Row: 4, 1, 6, 机械键盘 87键, 热插拔轴体 / RGB背光, https://picsum.photos/seed/g4/600/600, <<BLOB>>, <<BLOB>>, 259.00, 211, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 119
+<==        Row: 5, 1, 1, 新品智能音箱 Mini, 小身材大音量，语音控制, https://picsum.photos/seed/g5/600/600, <<BLOB>>, <<BLOB>>, 129.00, 0, 4, 2026-08-30 01:59:50, 优选数码旗舰店, 160
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@80ef7b7]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6158612b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@972949014 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6158612b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2308348a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1711980175 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT m.*, s.name AS shop_name FROM merchant m LEFT JOIN shop s ON m.id = s.merchant_id ORDER BY m.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, account, password, contact_name, contact_phone, status, create_time, shop_name
+<==        Row: 1, merchant1, $2a$10$M9hRBeloKw73XZYun9s7eOuMXo6/AgCLxDgnQ3Q8tNqvl3ysdEv2u, 王掌柜, 13800000001, 1, 2026-08-30 01:59:50, 优选数码旗舰店
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2308348a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35e86f34] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@103104960 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant m
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35e86f34]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34f4b4c3] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@976444461 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT a.*, m.account AS merchant_account FROM merchant_apply a LEFT JOIN merchant m ON a.merchant_id = m.id ORDER BY a.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, merchant_id, shop_name, category_ids, contact_name, contact_phone, qualification, status, reason, create_time, audit_time, merchant_account
+<==        Row: 1, 1, 优选数码二店, 1,4, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 0, null, 2026-08-30 01:59:50, null, merchant1
+<==        Row: 2, 1, 优选数码旗舰店, 1,2,5, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 1, null, 2026-08-30 01:59:50, 2026-08-25 01:59:50, merchant1
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34f4b4c3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@494bbc76] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@949272896 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant_apply a
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@494bbc76]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50ad5d60] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1584048389 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock FROM goods g JOIN shop s ON g.shop_id = s.id LEFT JOIN sku sk ON g.id = sk.goods_id GROUP BY g.id ORDER BY g.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, shop_id, category_id, name, subtitle, main_image, images, detail, price, sales, status, create_time, shop_name, stock
+<==        Row: 1, 1, 1, 无线蓝牙耳机 Pro, 主动降噪 / 30小时续航, https://picsum.photos/seed/g1/600/600, <<BLOB>>, <<BLOB>>, 199.00, 328, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 212
+<==        Row: 2, 1, 1, 智能手环 6代, 血氧监测 / 14天续航, https://picsum.photos/seed/g2/600/600, <<BLOB>>, <<BLOB>>, 149.00, 561, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 229
+<==        Row: 3, 1, 1, 便携充电宝 20000mAh, 22.5W快充 / 大容量, https://picsum.photos/seed/g3/600/600, <<BLOB>>, <<BLOB>>, 99.00, 890, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 200
+<==        Row: 4, 1, 6, 机械键盘 87键, 热插拔轴体 / RGB背光, https://picsum.photos/seed/g4/600/600, <<BLOB>>, <<BLOB>>, 259.00, 211, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 119
+<==        Row: 5, 1, 1, 新品智能音箱 Mini, 小身材大音量，语音控制, https://picsum.photos/seed/g5/600/600, <<BLOB>>, <<BLOB>>, 129.00, 0, 4, 2026-08-30 01:59:50, 优选数码旗舰店, 160
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50ad5d60]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e821cc8] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1561610942 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e821cc8]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a589068] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1855759145 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT a.*, m.account AS merchant_account FROM merchant_apply a LEFT JOIN merchant m ON a.merchant_id = m.id ORDER BY a.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, merchant_id, shop_name, category_ids, contact_name, contact_phone, qualification, status, reason, create_time, audit_time, merchant_account
+<==        Row: 1, 1, 优选数码二店, 1,4, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 0, null, 2026-08-30 01:59:50, null, merchant1
+<==        Row: 2, 1, 优选数码旗舰店, 1,2,5, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 1, null, 2026-08-30 01:59:50, 2026-08-25 01:59:50, merchant1
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a589068]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ad23904] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2094186297 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant_apply a
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ad23904]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19cc4337] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@386641534 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT m.*, s.name AS shop_name FROM merchant m LEFT JOIN shop s ON m.id = s.merchant_id ORDER BY m.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, account, password, contact_name, contact_phone, status, create_time, shop_name
+<==        Row: 1, merchant1, $2a$10$M9hRBeloKw73XZYun9s7eOuMXo6/AgCLxDgnQ3Q8tNqvl3ysdEv2u, 王掌柜, 13800000001, 1, 2026-08-30 01:59:50, 优选数码旗舰店
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19cc4337]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5636a445] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1441712510 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant m
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5636a445]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3790cd10] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@962016658 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT a.*, m.account AS merchant_account FROM merchant_apply a LEFT JOIN merchant m ON a.merchant_id = m.id ORDER BY a.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, merchant_id, shop_name, category_ids, contact_name, contact_phone, qualification, status, reason, create_time, audit_time, merchant_account
+<==        Row: 1, 1, 优选数码二店, 1,4, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 0, null, 2026-08-30 01:59:50, null, merchant1
+<==        Row: 2, 1, 优选数码旗舰店, 1,2,5, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 1, null, 2026-08-30 01:59:50, 2026-08-25 01:59:50, merchant1
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3790cd10]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@786a3fa9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1227068921 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant_apply a
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@786a3fa9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27c723a7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@687921455 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM user
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 3
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27c723a7]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@683dd314] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1996033967 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant m
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@683dd314]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@eb1fbea] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@135408731 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@eb1fbea]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@145a0123] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2087766828 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.status = ?
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@145a0123]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3de15e3] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1835736760 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant_apply a WHERE a.status = ?
+==> Parameters: 0(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3de15e3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@132f5eb3] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1621962808 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders o
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@132f5eb3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@661c378] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1867698113 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE create_time >= CURRENT_DATE
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@661c378]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f5d242] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@134720295 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(SUM(pay_amount), 0) FROM orders WHERE status IN (1, 2, 3, 5)
+==> Parameters: 
+<==    Columns: COALESCE(SUM(pay_amount), 0)
+<==        Row: 2963.00
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f5d242]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f8cd9fe] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@21326223 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT DATE(create_time) AS day, COUNT(*) AS orderCount, COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount ELSE 0 END), 0) AS saleAmount FROM orders WHERE create_time >= DATE_SUB(CURDATE(), INTERVAL ? DAY) GROUP BY DATE(create_time) ORDER BY day
+==> Parameters: 7(Integer)
+<==    Columns: day, orderCount, saleAmount
+<==        Row: 2026-08-27, 1, 199.00
+<==        Row: 2026-08-28, 1, 298.00
+<==        Row: 2026-08-29, 1, 437.00
+<==        Row: 2026-08-30, 4, 1582.00
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f8cd9fe]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75f07f3e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@394502206 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT status AS status, COUNT(*) AS cnt FROM orders GROUP BY status
+==> Parameters: 
+<==    Columns: status, cnt
+<==        Row: 1, 3
+<==        Row: 2, 1
+<==        Row: 5, 1
+<==        Row: 3, 4
+<==        Row: 4, 1
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75f07f3e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1cd0db86] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@303507052 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock FROM goods g JOIN shop s ON g.shop_id = s.id LEFT JOIN sku sk ON g.id = sk.goods_id GROUP BY g.id ORDER BY g.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, shop_id, category_id, name, subtitle, main_image, images, detail, price, sales, status, create_time, shop_name, stock
+<==        Row: 1, 1, 1, 无线蓝牙耳机 Pro, 主动降噪 / 30小时续航, https://picsum.photos/seed/g1/600/600, <<BLOB>>, <<BLOB>>, 199.00, 328, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 212
+<==        Row: 2, 1, 1, 智能手环 6代, 血氧监测 / 14天续航, https://picsum.photos/seed/g2/600/600, <<BLOB>>, <<BLOB>>, 149.00, 561, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 229
+<==        Row: 3, 1, 1, 便携充电宝 20000mAh, 22.5W快充 / 大容量, https://picsum.photos/seed/g3/600/600, <<BLOB>>, <<BLOB>>, 99.00, 890, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 200
+<==        Row: 4, 1, 6, 机械键盘 87键, 热插拔轴体 / RGB背光, https://picsum.photos/seed/g4/600/600, <<BLOB>>, <<BLOB>>, 259.00, 211, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 119
+<==        Row: 5, 1, 1, 新品智能音箱 Mini, 小身材大音量，语音控制, https://picsum.photos/seed/g5/600/600, <<BLOB>>, <<BLOB>>, 129.00, 0, 4, 2026-08-30 01:59:50, 优选数码旗舰店, 160
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1cd0db86]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62b3ba42] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@835656162 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62b3ba42]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@138df870] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1160849614 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT o.*, s.name AS shop_name FROM orders o LEFT JOIN shop s ON o.shop_id = s.id ORDER BY o.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, order_no, user_id, shop_id, total_amount, freight, discount, pay_amount, addr_snapshot, coupon_id, remark, status, pay_time, ship_time, finish_time, create_time, shop_name
+<==        Row: 12, 202608301723439598, 2, 1, 259.00, 0.00, 20.00, 239.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, 1, , 1, 2026-08-30 17:23:46, null, null, 2026-08-30 17:23:43, 优选数码旗舰店
+<==        Row: 9, 202608301708466925, 2, 1, 348.00, 0.00, 0.00, 348.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, null, , 1, 2026-08-30 17:08:55, null, null, 2026-08-30 17:08:46, 优选数码旗舰店
+<==        Row: 8, 202608301259363449, 3, 1, 199.00, 0.00, 0.00, 199.00, ?? 13800000000 ?????????????100?, null, ??, 4, null, null, null, 2026-08-30 12:59:36, 优选数码旗舰店
+<==        Row: 7, 202608301158174668, 2, 1, 995.00, 0.00, 0.00, 995.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, null, , 3, 2026-08-30 11:58:47, 2026-08-30 12:00:21, 2026-08-30 12:00:35, 2026-08-30 11:58:17, 优选数码旗舰店
+<==        Row: 1, M2026080001, 1, 1, 457.00, 0.00, 20.00, 437.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, 请尽快发货, 1, 2026-08-30 01:59:50, null, null, 2026-08-29 23:59:50, 优选数码旗舰店
+<==        Row: 3, M2026080003, 1, 1, 298.00, 0.00, 0.00, 298.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, 手环送去退换, 5, 2026-08-29 01:59:50, 2026-08-30 01:59:50, null, 2026-08-28 23:59:50, 优选数码旗舰店
+<==        Row: 2, M2026080002, 1, 1, 199.00, 0.00, 0.00, 199.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 2, 2026-08-28 01:59:50, 2026-08-29 01:59:50, null, 2026-08-27 22:59:50, 优选数码旗舰店
+<==        Row: 4, M2026080004, 1, 1, 99.00, 0.00, 0.00, 99.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-08-20 01:59:50, 2026-08-21 01:59:50, 2026-08-22 01:59:50, 2026-08-20 01:59:50, 优选数码旗舰店
+<==        Row: 5, M2026080005, 1, 1, 149.00, 0.00, 0.00, 149.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-08-10 01:59:50, 2026-08-11 01:59:50, 2026-08-12 01:59:50, 2026-08-10 01:59:50, 优选数码旗舰店
+<==        Row: 6, M2026080006, 1, 1, 199.00, 0.00, 0.00, 199.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-07-31 01:59:50, 2026-08-01 01:59:50, 2026-08-02 01:59:50, 2026-07-31 01:59:50, 优选数码旗舰店
+<==      Total: 10
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@138df870]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c1c54f5] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@955954268 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 12(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 14, 12, 4, 机械键盘 87键, 6, 轴体:红轴, https://picsum.photos/seed/g4/600/600, 259.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c1c54f5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2deb88a4] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@601807376 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 9(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 10, 9, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 1, 0
+<==        Row: 11, 9, 2, 智能手环 6代, 3, 颜色:曜石黑, https://picsum.photos/seed/g2/600/600, 149.00, 1, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2deb88a4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b119695] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1515095547 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 8(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 9, 8, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b119695]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ffd79a3] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@928223354 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 7(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 8, 7, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 5, 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ffd79a3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a0768e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@340962926 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 1, 1, 4, 机械键盘 87键, 6, 轴体:红轴, https://picsum.photos/seed/g4r/100/100, 259.00, 1, 0
+<==        Row: 2, 1, 3, 便携充电宝 20000mAh, 5, 颜色:白色, https://picsum.photos/seed/g3w/100/100, 99.00, 2, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a0768e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4279d13e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1173019641 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 3(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 4, 3, 2, 智能手环 6代, 3, 颜色:曜石黑, https://picsum.photos/seed/g2b/100/100, 149.00, 2, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4279d13e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d29c105] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@949089752 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 2(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 3, 2, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1w/100/100, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d29c105]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52bdf93a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@830421889 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 4(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 5, 4, 3, 便携充电宝 20000mAh, 5, 颜色:白色, https://picsum.photos/seed/g3w/100/100, 99.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52bdf93a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ae5fd2] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1063719572 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 5(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 6, 5, 2, 智能手环 6代, 4, 颜色:星空蓝, https://picsum.photos/seed/g2s/100/100, 149.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ae5fd2]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48fef947] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@945712965 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 6(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 7, 6, 1, 无线蓝牙耳机 Pro, 2, 颜色:黑色, https://picsum.photos/seed/g1b/100/100, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48fef947]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c1b5982] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@328251783 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders o
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2c1b5982]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@59d8cd0b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1813059921 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT p.*, u.nickname AS user_name FROM payment p LEFT JOIN user u ON p.user_id = u.id ORDER BY p.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, trade_no, order_id, user_id, amount, method, status, pay_time, create_time, user_name
+<==        Row: 11, PAY202608301723464670, 12, 2, 239.00, BALANCE, 1, 2026-08-30 17:23:47, 2026-08-30 17:23:46, admin
+<==        Row: 8, PAY202608301708553782, 9, 2, 348.00, BALANCE, 1, 2026-08-30 17:08:55, 2026-08-30 17:08:55, admin
+<==        Row: 7, PAY202608301158478226, 7, 2, 995.00, BALANCE, 1, 2026-08-30 11:58:48, 2026-08-30 11:58:47, admin
+<==        Row: 1, T2026080001, 1, 1, 437.00, BALANCE, 1, 2026-08-29 23:59:50, 2026-08-30 01:59:50, ????¤???°???
+<==        Row: 2, T2026080002, 2, 1, 199.00, CARD, 1, 2026-08-28 01:59:50, 2026-08-30 01:59:50, ????¤???°???
+<==        Row: 3, T2026080003, 3, 1, 298.00, BALANCE, 1, 2026-08-29 01:59:50, 2026-08-30 01:59:50, ????¤???°???
+<==        Row: 4, T2026080004, 4, 1, 99.00, BALANCE, 1, 2026-08-20 01:59:50, 2026-08-30 01:59:50, ????¤???°???
+<==        Row: 5, T2026080005, 5, 1, 149.00, BALANCE, 1, 2026-08-10 01:59:50, 2026-08-30 01:59:50, ????¤???°???
+<==        Row: 6, T2026080006, 6, 1, 199.00, CARD, 1, 2026-07-31 01:59:50, 2026-08-30 01:59:50, ????¤???°???
+<==      Total: 9
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@59d8cd0b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e285c95] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1779894160 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM payment
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 9
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e285c95]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26bbb44] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@140613488 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM coupon ORDER BY id DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, name, threshold, amount, total, received, start_time, end_time, status
+<==        Row: 6, 满100减20, 100.00, 20.00, 0, 0, null, null, 1
+<==        Row: 2, 满100减10, 100.00, 10.00, 0, 2, 2026-01-01 00:00:00, 2026-12-31 23:59:59, 1
+<==        Row: 1, 新人专享券, 50.00, 20.00, 0, 3, 2026-01-01 00:00:00, 2026-12-31 23:59:59, 1
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26bbb44]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44655a1f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@462125132 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM coupon
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 3
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44655a1f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2cb9ba6b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@939854726 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT o.*, s.name AS shop_name FROM orders o LEFT JOIN shop s ON o.shop_id = s.id ORDER BY o.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, order_no, user_id, shop_id, total_amount, freight, discount, pay_amount, addr_snapshot, coupon_id, remark, status, pay_time, ship_time, finish_time, create_time, shop_name
+<==        Row: 12, 202608301723439598, 2, 1, 259.00, 0.00, 20.00, 239.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, 1, , 1, 2026-08-30 17:23:46, null, null, 2026-08-30 17:23:43, 优选数码旗舰店
+<==        Row: 9, 202608301708466925, 2, 1, 348.00, 0.00, 0.00, 348.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, null, , 1, 2026-08-30 17:08:55, null, null, 2026-08-30 17:08:46, 优选数码旗舰店
+<==        Row: 8, 202608301259363449, 3, 1, 199.00, 0.00, 0.00, 199.00, ?? 13800000000 ?????????????100?, null, ??, 4, null, null, null, 2026-08-30 12:59:36, 优选数码旗舰店
+<==        Row: 7, 202608301158174668, 2, 1, 995.00, 0.00, 0.00, 995.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, null, , 3, 2026-08-30 11:58:47, 2026-08-30 12:00:21, 2026-08-30 12:00:35, 2026-08-30 11:58:17, 优选数码旗舰店
+<==        Row: 1, M2026080001, 1, 1, 457.00, 0.00, 20.00, 437.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, 请尽快发货, 1, 2026-08-30 01:59:50, null, null, 2026-08-29 23:59:50, 优选数码旗舰店
+<==        Row: 3, M2026080003, 1, 1, 298.00, 0.00, 0.00, 298.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, 手环送去退换, 5, 2026-08-29 01:59:50, 2026-08-30 01:59:50, null, 2026-08-28 23:59:50, 优选数码旗舰店
+<==        Row: 2, M2026080002, 1, 1, 199.00, 0.00, 0.00, 199.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 2, 2026-08-28 01:59:50, 2026-08-29 01:59:50, null, 2026-08-27 22:59:50, 优选数码旗舰店
+<==        Row: 4, M2026080004, 1, 1, 99.00, 0.00, 0.00, 99.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-08-20 01:59:50, 2026-08-21 01:59:50, 2026-08-22 01:59:50, 2026-08-20 01:59:50, 优选数码旗舰店
+<==        Row: 5, M2026080005, 1, 1, 149.00, 0.00, 0.00, 149.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-08-10 01:59:50, 2026-08-11 01:59:50, 2026-08-12 01:59:50, 2026-08-10 01:59:50, 优选数码旗舰店
+<==        Row: 6, M2026080006, 1, 1, 199.00, 0.00, 0.00, 199.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-07-31 01:59:50, 2026-08-01 01:59:50, 2026-08-02 01:59:50, 2026-07-31 01:59:50, 优选数码旗舰店
+<==      Total: 10
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2cb9ba6b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76f2def] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1672488055 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 12(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 14, 12, 4, 机械键盘 87键, 6, 轴体:红轴, https://picsum.photos/seed/g4/600/600, 259.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76f2def]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a4fd755] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1144096166 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 9(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 10, 9, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 1, 0
+<==        Row: 11, 9, 2, 智能手环 6代, 3, 颜色:曜石黑, https://picsum.photos/seed/g2/600/600, 149.00, 1, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a4fd755]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9c64ffb] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1299694825 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 8(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 9, 8, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9c64ffb]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@715aaf7a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@268144941 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 7(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 8, 7, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 5, 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@715aaf7a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12792265] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@922517039 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 1, 1, 4, 机械键盘 87键, 6, 轴体:红轴, https://picsum.photos/seed/g4r/100/100, 259.00, 1, 0
+<==        Row: 2, 1, 3, 便携充电宝 20000mAh, 5, 颜色:白色, https://picsum.photos/seed/g3w/100/100, 99.00, 2, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12792265]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@587359c2] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@63054499 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 3(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 4, 3, 2, 智能手环 6代, 3, 颜色:曜石黑, https://picsum.photos/seed/g2b/100/100, 149.00, 2, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@587359c2]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c54a4c6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@514542535 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 2(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 3, 2, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1w/100/100, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c54a4c6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@b3cc84d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1916219256 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 4(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 5, 4, 3, 便携充电宝 20000mAh, 5, 颜色:白色, https://picsum.photos/seed/g3w/100/100, 99.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@b3cc84d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f3d9e2c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@581847334 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 5(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 6, 5, 2, 智能手环 6代, 4, 颜色:星空蓝, https://picsum.photos/seed/g2s/100/100, 149.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f3d9e2c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a903ebc] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1241452860 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 6(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 7, 6, 1, 无线蓝牙耳机 Pro, 2, 颜色:黑色, https://picsum.photos/seed/g1b/100/100, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a903ebc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f30955f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1413364187 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders o
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f30955f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f4c494] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@967765246 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock FROM goods g JOIN shop s ON g.shop_id = s.id LEFT JOIN sku sk ON g.id = sk.goods_id GROUP BY g.id ORDER BY g.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, shop_id, category_id, name, subtitle, main_image, images, detail, price, sales, status, create_time, shop_name, stock
+<==        Row: 1, 1, 1, 无线蓝牙耳机 Pro, 主动降噪 / 30小时续航, https://picsum.photos/seed/g1/600/600, <<BLOB>>, <<BLOB>>, 199.00, 328, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 212
+<==        Row: 2, 1, 1, 智能手环 6代, 血氧监测 / 14天续航, https://picsum.photos/seed/g2/600/600, <<BLOB>>, <<BLOB>>, 149.00, 561, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 229
+<==        Row: 3, 1, 1, 便携充电宝 20000mAh, 22.5W快充 / 大容量, https://picsum.photos/seed/g3/600/600, <<BLOB>>, <<BLOB>>, 99.00, 890, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 200
+<==        Row: 4, 1, 6, 机械键盘 87键, 热插拔轴体 / RGB背光, https://picsum.photos/seed/g4/600/600, <<BLOB>>, <<BLOB>>, 259.00, 211, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 119
+<==        Row: 5, 1, 1, 新品智能音箱 Mini, 小身材大音量，语音控制, https://picsum.photos/seed/g5/600/600, <<BLOB>>, <<BLOB>>, 129.00, 0, 4, 2026-08-30 01:59:50, 优选数码旗舰店, 160
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f4c494]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@615558a9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@552361535 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@615558a9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6aa3b220] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@289582185 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT m.*, s.name AS shop_name FROM merchant m LEFT JOIN shop s ON m.id = s.merchant_id ORDER BY m.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, account, password, contact_name, contact_phone, status, create_time, shop_name
+<==        Row: 1, merchant1, $2a$10$M9hRBeloKw73XZYun9s7eOuMXo6/AgCLxDgnQ3Q8tNqvl3ysdEv2u, 王掌柜, 13800000001, 1, 2026-08-30 01:59:50, 优选数码旗舰店
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6aa3b220]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@92c6f8a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2129264189 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant m
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@92c6f8a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f6aaf7e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1835848588 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT a.*, m.account AS merchant_account FROM merchant_apply a LEFT JOIN merchant m ON a.merchant_id = m.id ORDER BY a.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, merchant_id, shop_name, category_ids, contact_name, contact_phone, qualification, status, reason, create_time, audit_time, merchant_account
+<==        Row: 1, 1, 优选数码二店, 1,4, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 0, null, 2026-08-30 01:59:50, null, merchant1
+<==        Row: 2, 1, 优选数码旗舰店, 1,2,5, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 1, null, 2026-08-30 01:59:50, 2026-08-25 01:59:50, merchant1
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f6aaf7e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@325781ba] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@952945105 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant_apply a
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@325781ba]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cc9486] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@60305169 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cc9486]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@317b3617] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@407224550 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock FROM goods g JOIN shop s ON g.shop_id = s.id LEFT JOIN sku sk ON g.id = sk.goods_id WHERE g.shop_id = ? GROUP BY g.id ORDER BY g.create_time DESC LIMIT ?, ?
+==> Parameters: 1(Long), 0(Integer), 10(Integer)
+<==    Columns: id, shop_id, category_id, name, subtitle, main_image, images, detail, price, sales, status, create_time, shop_name, stock
+<==        Row: 1, 1, 1, 无线蓝牙耳机 Pro, 主动降噪 / 30小时续航, https://picsum.photos/seed/g1/600/600, <<BLOB>>, <<BLOB>>, 199.00, 328, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 212
+<==        Row: 2, 1, 1, 智能手环 6代, 血氧监测 / 14天续航, https://picsum.photos/seed/g2/600/600, <<BLOB>>, <<BLOB>>, 149.00, 561, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 229
+<==        Row: 3, 1, 1, 便携充电宝 20000mAh, 22.5W快充 / 大容量, https://picsum.photos/seed/g3/600/600, <<BLOB>>, <<BLOB>>, 99.00, 890, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 200
+<==        Row: 4, 1, 6, 机械键盘 87键, 热插拔轴体 / RGB背光, https://picsum.photos/seed/g4/600/600, <<BLOB>>, <<BLOB>>, 259.00, 211, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 119
+<==        Row: 5, 1, 1, 新品智能音箱 Mini, 小身材大音量，语音控制, https://picsum.photos/seed/g5/600/600, <<BLOB>>, <<BLOB>>, 129.00, 0, 4, 2026-08-30 01:59:50, 优选数码旗舰店, 160
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@317b3617]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42dc4681] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@712973123 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42dc4681]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e7359f3] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@325617375 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT o.*, s.name AS shop_name FROM orders o LEFT JOIN shop s ON o.shop_id = s.id WHERE o.shop_id = ? ORDER BY o.create_time DESC LIMIT ?, ?
+==> Parameters: 1(Long), 0(Integer), 10(Integer)
+<==    Columns: id, order_no, user_id, shop_id, total_amount, freight, discount, pay_amount, addr_snapshot, coupon_id, remark, status, pay_time, ship_time, finish_time, create_time, shop_name
+<==        Row: 12, 202608301723439598, 2, 1, 259.00, 0.00, 20.00, 239.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, 1, , 1, 2026-08-30 17:23:46, null, null, 2026-08-30 17:23:43, 优选数码旗舰店
+<==        Row: 9, 202608301708466925, 2, 1, 348.00, 0.00, 0.00, 348.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, null, , 1, 2026-08-30 17:08:55, null, null, 2026-08-30 17:08:46, 优选数码旗舰店
+<==        Row: 8, 202608301259363449, 3, 1, 199.00, 0.00, 0.00, 199.00, ?? 13800000000 ?????????????100?, null, ??, 4, null, null, null, 2026-08-30 12:59:36, 优选数码旗舰店
+<==        Row: 7, 202608301158174668, 2, 1, 995.00, 0.00, 0.00, 995.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, null, , 3, 2026-08-30 11:58:47, 2026-08-30 12:00:21, 2026-08-30 12:00:35, 2026-08-30 11:58:17, 优选数码旗舰店
+<==        Row: 1, M2026080001, 1, 1, 457.00, 0.00, 20.00, 437.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, 请尽快发货, 1, 2026-08-30 01:59:50, null, null, 2026-08-29 23:59:50, 优选数码旗舰店
+<==        Row: 3, M2026080003, 1, 1, 298.00, 0.00, 0.00, 298.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, 手环送去退换, 5, 2026-08-29 01:59:50, 2026-08-30 01:59:50, null, 2026-08-28 23:59:50, 优选数码旗舰店
+<==        Row: 2, M2026080002, 1, 1, 199.00, 0.00, 0.00, 199.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 2, 2026-08-28 01:59:50, 2026-08-29 01:59:50, null, 2026-08-27 22:59:50, 优选数码旗舰店
+<==        Row: 4, M2026080004, 1, 1, 99.00, 0.00, 0.00, 99.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-08-20 01:59:50, 2026-08-21 01:59:50, 2026-08-22 01:59:50, 2026-08-20 01:59:50, 优选数码旗舰店
+<==        Row: 5, M2026080005, 1, 1, 149.00, 0.00, 0.00, 149.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-08-10 01:59:50, 2026-08-11 01:59:50, 2026-08-12 01:59:50, 2026-08-10 01:59:50, 优选数码旗舰店
+<==        Row: 6, M2026080006, 1, 1, 199.00, 0.00, 0.00, 199.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-07-31 01:59:50, 2026-08-01 01:59:50, 2026-08-02 01:59:50, 2026-07-31 01:59:50, 优选数码旗舰店
+<==      Total: 10
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e7359f3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6afb3014] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1706152677 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 12(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 14, 12, 4, 机械键盘 87键, 6, 轴体:红轴, https://picsum.photos/seed/g4/600/600, 259.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6afb3014]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@408c3818] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1933892493 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 9(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 10, 9, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 1, 0
+<==        Row: 11, 9, 2, 智能手环 6代, 3, 颜色:曜石黑, https://picsum.photos/seed/g2/600/600, 149.00, 1, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@408c3818]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e0b6d3f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1332139038 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 8(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 9, 8, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e0b6d3f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a3d6aba] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2137687127 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 7(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 8, 7, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 5, 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a3d6aba]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@438d6200] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1657059441 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 1, 1, 4, 机械键盘 87键, 6, 轴体:红轴, https://picsum.photos/seed/g4r/100/100, 259.00, 1, 0
+<==        Row: 2, 1, 3, 便携充电宝 20000mAh, 5, 颜色:白色, https://picsum.photos/seed/g3w/100/100, 99.00, 2, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@438d6200]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6413b99f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1285970559 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 3(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 4, 3, 2, 智能手环 6代, 3, 颜色:曜石黑, https://picsum.photos/seed/g2b/100/100, 149.00, 2, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6413b99f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c349044] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@93454620 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 2(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 3, 2, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1w/100/100, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c349044]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43e2ae9e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@462200854 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 4(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 5, 4, 3, 便携充电宝 20000mAh, 5, 颜色:白色, https://picsum.photos/seed/g3w/100/100, 99.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43e2ae9e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b1c2d77] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1843192532 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 5(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 6, 5, 2, 智能手环 6代, 4, 颜色:星空蓝, https://picsum.photos/seed/g2s/100/100, 149.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b1c2d77]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@379be9e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1507085331 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 6(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 7, 6, 1, 无线蓝牙耳机 Pro, 2, 颜色:黑色, https://picsum.photos/seed/g1b/100/100, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@379be9e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3341db9f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2105679399 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3341db9f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c9cca0e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1661080181 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM aftersale WHERE shop_id = ? ORDER BY create_time DESC LIMIT ?, ?
+==> Parameters: 1(Long), 0(Integer), 10(Integer)
+<==    Columns: id, order_id, order_no, user_id, shop_id, type, reason, refund_amount, images, status, reply, create_time, handle_time
+<==        Row: 1, 3, M2026080003, 1, 1, 2, 手环心率测量不准，申请退货退款, 298.00, <<BLOB>>, 0, null, 2026-08-30 01:59:50, null
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c9cca0e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4dfdecf1] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1042275969 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM aftersale WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4dfdecf1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40d143fc] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1444644576 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM notice ORDER BY id DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, title, content, status, sort, create_time
+<==        Row: 2, 模拟项目公告, <<BLOB>>, 1, 2, 2026-08-30 01:59:50
+<==        Row: 1, 平台新用户注册立减, <<BLOB>>, 1, 1, 2026-08-30 01:59:50
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40d143fc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@409ae65e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@169775890 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM notice
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@409ae65e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25f7ff2e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1612535911 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: UPDATE notice SET title = ?, content = ?, status = ?, sort = ? WHERE id = ?
+==> Parameters: 模拟项目公告(String), 本系统支付与物流均为模拟数据。(String), 1(Integer), 2(Integer), 2(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25f7ff2e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71f3378c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@838494438 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM notice ORDER BY id DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, title, content, status, sort, create_time
+<==        Row: 2, 模拟项目公告, <<BLOB>>, 1, 2, 2026-08-30 01:59:50
+<==        Row: 1, 平台新用户注册立减, <<BLOB>>, 1, 1, 2026-08-30 01:59:50
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71f3378c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5dc7dac7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@895535524 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM notice
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5dc7dac7]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72a46ebf] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@714411807 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM banner WHERE status = 1 ORDER BY sort ASC
+Creating a new SqlSession
+==> Parameters: 
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a39f3cf] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@743754917 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT * FROM notice WHERE status = 1 ORDER BY sort ASC, create_time DESC
+<==    Columns: id, image, link, sort, status
+==> Parameters: 
+<==        Row: 1, https://picsum.photos/seed/b1/1200/400, null, 1, 1
+<==        Row: 2, https://picsum.photos/seed/b2/1200/400, 1, 2, 1
+<==        Row: 3, https://picsum.photos/seed/b3/1200/400, null, 3, 1
+<==    Columns: id, title, content, status, sort, create_time
+<==      Total: 3
+<==        Row: 1, 平台新用户注册立减, <<BLOB>>, 1, 1, 2026-08-30 01:59:50
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72a46ebf]
+Creating a new SqlSession
+<==        Row: 2, 模拟项目公告, <<BLOB>>, 1, 2, 2026-08-30 01:59:50
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@243c0a9d] was not registered for synchronization because synchronization is not active
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21061e94] was not registered for synchronization because synchronization is not active
+<==      Total: 2
+JDBC Connection [HikariProxyConnection@1186392984 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a39f3cf]
+==>  Preparing: SELECT * FROM category ORDER BY sort ASC, id ASC
+==> Parameters: 
+JDBC Connection [HikariProxyConnection@1585942119 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock FROM goods g JOIN shop s ON g.shop_id = s.id LEFT JOIN sku sk ON g.id = sk.goods_id WHERE g.status = 1 GROUP BY g.id ORDER BY g.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, parent_id, name, sort, icon
+<==        Row: 1, 0, 数码家电, 1, null
+<==        Row: 6, 1, 手机, 1, null
+<==        Row: 9, 2, 男装, 1, null
+<==        Row: 12, 3, 休闲零食, 1, null
+<==        Row: 13, 4, 护肤, 1, null
+<==        Row: 14, 5, 厨具, 1, null
+<==        Row: 2, 0, 服饰鞋包, 2, null
+<==        Row: 7, 1, 电脑, 2, null
+<==        Row: 10, 2, 女装, 2, null
+<==    Columns: id, shop_id, category_id, name, subtitle, main_image, images, detail, price, sales, status, create_time, shop_name, stock
+<==        Row: 3, 0, 食品生鲜, 3, null
+<==        Row: 1, 1, 1, 无线蓝牙耳机 Pro, 主动降噪 / 30小时续航, https://picsum.photos/seed/g1/600/600, <<BLOB>>, <<BLOB>>, 199.00, 328, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 212
+<==        Row: 8, 1, 耳机音箱, 3, null
+<==        Row: 2, 1, 1, 智能手环 6代, 血氧监测 / 14天续航, https://picsum.photos/seed/g2/600/600, <<BLOB>>, <<BLOB>>, 149.00, 561, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 229
+<==        Row: 3, 1, 1, 便携充电宝 20000mAh, 22.5W快充 / 大容量, https://picsum.photos/seed/g3/600/600, <<BLOB>>, <<BLOB>>, 99.00, 890, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 200
+<==        Row: 11, 2, 运动鞋, 3, null
+<==        Row: 4, 1, 6, 机械键盘 87键, 热插拔轴体 / RGB背光, https://picsum.photos/seed/g4/600/600, <<BLOB>>, <<BLOB>>, 259.00, 211, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 119
+<==        Row: 4, 0, 美妆个护, 4, null
+<==      Total: 4
+<==        Row: 5, 0, 家居生活, 5, null
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21061e94]
+<==      Total: 14
+Creating a new SqlSession
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@243c0a9d]
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ef16743] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@127992047 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.status = 1
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ef16743]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1cce35f5] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1865848501 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM banner WHERE status = 1 ORDER BY sort ASC
+==> Parameters: 
+<==    Columns: id, image, link, sort, status
+<==        Row: 1, https://picsum.photos/seed/b1/1200/400, null, 1, 1
+<==        Row: 2, https://picsum.photos/seed/b2/1200/400, 1, 2, 1
+<==        Row: 3, https://picsum.photos/seed/b3/1200/400, null, 3, 1
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1cce35f5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7351bf01] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1324425175 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM category ORDER BY sort ASC, id ASC
+==> Parameters: 
+<==    Columns: id, parent_id, name, sort, icon
+<==        Row: 1, 0, 数码家电, 1, null
+<==        Row: 6, 1, 手机, 1, null
+<==        Row: 9, 2, 男装, 1, null
+<==        Row: 12, 3, 休闲零食, 1, null
+<==        Row: 13, 4, 护肤, 1, null
+<==        Row: 14, 5, 厨具, 1, null
+<==        Row: 2, 0, 服饰鞋包, 2, null
+<==        Row: 7, 1, 电脑, 2, null
+<==        Row: 10, 2, 女装, 2, null
+<==        Row: 3, 0, 食品生鲜, 3, null
+<==        Row: 8, 1, 耳机音箱, 3, null
+<==        Row: 11, 2, 运动鞋, 3, null
+<==        Row: 4, 0, 美妆个护, 4, null
+<==        Row: 5, 0, 家居生活, 5, null
+<==      Total: 14
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7351bf01]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@275c9188] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@98860022 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock FROM goods g JOIN shop s ON g.shop_id = s.id LEFT JOIN sku sk ON g.id = sk.goods_id WHERE g.status = 1 GROUP BY g.id ORDER BY g.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 8(Integer)
+<==    Columns: id, shop_id, category_id, name, subtitle, main_image, images, detail, price, sales, status, create_time, shop_name, stock
+<==        Row: 1, 1, 1, 无线蓝牙耳机 Pro, 主动降噪 / 30小时续航, https://picsum.photos/seed/g1/600/600, <<BLOB>>, <<BLOB>>, 199.00, 328, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 212
+<==        Row: 2, 1, 1, 智能手环 6代, 血氧监测 / 14天续航, https://picsum.photos/seed/g2/600/600, <<BLOB>>, <<BLOB>>, 149.00, 561, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 229
+<==        Row: 3, 1, 1, 便携充电宝 20000mAh, 22.5W快充 / 大容量, https://picsum.photos/seed/g3/600/600, <<BLOB>>, <<BLOB>>, 99.00, 890, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 200
+<==        Row: 4, 1, 6, 机械键盘 87键, 热插拔轴体 / RGB背光, https://picsum.photos/seed/g4/600/600, <<BLOB>>, <<BLOB>>, 259.00, 211, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 119
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@275c9188]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4382876d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1150532 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.status = 1
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4382876d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e467ce0] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1241110880 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM notice WHERE status = 1 ORDER BY sort ASC, create_time DESC
+==> Parameters: 
+<==    Columns: id, title, content, status, sort, create_time
+<==        Row: 1, 平台新用户注册立减, <<BLOB>>, 1, 1, 2026-08-30 01:59:50
+<==        Row: 2, 模拟项目公告, <<BLOB>>, 1, 2, 2026-08-30 01:59:50
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e467ce0]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f070e54] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2140131734 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f070e54]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ca5f55a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@192359220 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ca5f55a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3852fb0c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@961813443 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM merchant WHERE account = ?
+==> Parameters: merchant1(String)
+<==    Columns: id, account, password, contact_name, contact_phone, status, create_time
+<==        Row: 1, merchant1, $2a$10$M9hRBeloKw73XZYun9s7eOuMXo6/AgCLxDgnQ3Q8tNqvl3ysdEv2u, 王掌柜, 13800000001, 1, 2026-08-30 01:59:50
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3852fb0c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@148f365c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1468338288 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: INSERT INTO login_log (username, user_type, client, ip, result, message) VALUES (?, ?, ?, ?, ?, ?)
+==> Parameters: merchant1(String), MERCHANT(String), PC(String), 0:0:0:0:0:0:0:1(String), SUCCESS(String), 登录成功(String)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@148f365c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ee2956d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1568657737 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM shop WHERE merchant_id = ? LIMIT 1
+==> Parameters: 1(Long)
+<==    Columns: id, merchant_id, name, logo, banner, intro, status, create_time
+<==        Row: 1, 1, 优选数码旗舰店, https://img.alicdn.com/logo.png, , 正品数码，七天无理由, 1, 2026-08-30 01:59:50
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ee2956d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12548618] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2136500282 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT DATE(o.create_time) AS day, COUNT(DISTINCT o.id) AS orderCount, COALESCE(SUM(CASE WHEN o.status IN (1, 2, 3, 5) THEN o.pay_amount ELSE 0 END), 0) AS saleAmount, COALESCE(SUM(oi.quantity), 0) AS itemQty FROM orders o LEFT JOIN order_item oi ON oi.order_id = o.id WHERE o.shop_id = ? AND o.create_time >= DATE_SUB(CURDATE(), INTERVAL ? DAY) GROUP BY DATE(o.create_time) ORDER BY day
+==> Parameters: 1(Long), 7(Integer)
+<==    Columns: day, orderCount, saleAmount, itemQty
+<==        Row: 2026-08-27, 1, 199.00, 1
+<==        Row: 2026-08-28, 1, 298.00, 2
+<==        Row: 2026-08-29, 1, 874.00, 3
+<==        Row: 2026-08-30, 4, 1930.00, 9
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12548618]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d8588e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@847931979 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT status AS status, COUNT(*) AS cnt FROM orders WHERE shop_id = ? GROUP BY status
+==> Parameters: 1(Long)
+<==    Columns: status, cnt
+<==        Row: 1, 3
+<==        Row: 2, 1
+<==        Row: 5, 1
+<==        Row: 3, 4
+<==        Row: 4, 1
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d8588e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@bbcd219] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2064621035 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT oi.goods_id AS goodsId, oi.goods_name AS goodsName, SUM(oi.quantity) AS qty, COALESCE(SUM(oi.price * oi.quantity), 0) AS amount FROM order_item oi JOIN orders o ON oi.order_id = o.id WHERE o.shop_id = ? AND o.status IN (1, 2, 3, 5) GROUP BY oi.goods_id, oi.goods_name ORDER BY qty DESC LIMIT ?
+==> Parameters: 1(Long), 5(Integer)
+<==    Columns: goodsId, goodsName, qty, amount
+<==        Row: 1, 无线蓝牙耳机 Pro, 8, 1592.00
+<==        Row: 2, 智能手环 6代, 4, 596.00
+<==        Row: 3, 便携充电宝 20000mAh, 3, 297.00
+<==        Row: 4, 机械键盘 87键, 2, 518.00
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@bbcd219]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c4b8d8a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@17475072 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT c.id AS categoryId, COALESCE(c.name, '未分类') AS categoryName, COALESCE(SUM(oi.price * oi.quantity), 0) AS amount FROM order_item oi JOIN orders o ON oi.order_id = o.id JOIN goods g ON oi.goods_id = g.id LEFT JOIN category c ON g.category_id = c.id WHERE o.shop_id = ? AND o.status IN (1, 2, 3, 5) GROUP BY c.id, c.name
+==> Parameters: 1(Long)
+<==    Columns: categoryId, categoryName, amount
+<==        Row: 6, 手机, 518.00
+<==        Row: 1, 数码家电, 2485.00
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c4b8d8a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d308183] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@128914113 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN 1 ELSE 0 END), 0) AS paid, COALESCE(SUM(CASE WHEN status IN (2, 3) THEN 1 ELSE 0 END), 0) AS shipped, COALESCE(SUM(CASE WHEN status = 3 THEN 1 ELSE 0 END), 0) AS finished, COALESCE(AVG(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount END), 0) AS avgPay, COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount ELSE 0 END), 0) AS saleAmount FROM orders WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: paid, shipped, finished, avgPay, saleAmount
+<==        Row: 9, 5, 4, 329.222222, 2963.00
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d308183]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8ec5d64] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1631185251 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(AVG(rating), 0) AS avgRating, COALESCE(SUM(CASE WHEN rating >= 4 THEN 1 ELSE 0 END), 0) AS positiveCount, COUNT(*) AS total FROM review WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: avgRating, positiveCount, total
+<==        Row: 4.5000, 2, 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8ec5d64]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c16afc] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1814827069 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c16afc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@225b73d5] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@801139688 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ? AND g.status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@225b73d5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19cc2b09] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1310883506 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM aftersale WHERE shop_id = ? ORDER BY create_time DESC LIMIT ?, ?
+==> Parameters: 1(Long), 0(Integer), 10(Integer)
+<==    Columns: id, order_id, order_no, user_id, shop_id, type, reason, refund_amount, images, status, reply, create_time, handle_time
+<==        Row: 1, 3, M2026080003, 1, 1, 2, 手环心率测量不准，申请退货退款, 298.00, <<BLOB>>, 0, null, 2026-08-30 01:59:50, null
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19cc2b09]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7777b18] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2140900508 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM aftersale WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7777b18]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76393a09] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@460712274 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM aftersale WHERE shop_id = ? ORDER BY create_time DESC LIMIT ?, ?
+==> Parameters: 1(Long), 0(Integer), 10(Integer)
+<==    Columns: id, order_id, order_no, user_id, shop_id, type, reason, refund_amount, images, status, reply, create_time, handle_time
+<==        Row: 1, 3, M2026080003, 1, 1, 2, 手环心率测量不准，申请退货退款, 298.00, <<BLOB>>, 0, null, 2026-08-30 01:59:50, null
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76393a09]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21d61c76] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@511738679 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM aftersale WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@21d61c76]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5bc73b23] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1489705508 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5bc73b23]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@630fb087] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1401848187 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM shop WHERE merchant_id = ? LIMIT 1
+==> Parameters: 1(Long)
+<==    Columns: id, merchant_id, name, logo, banner, intro, status, create_time
+<==        Row: 1, 1, 优选数码旗舰店, https://img.alicdn.com/logo.png, , 正品数码，七天无理由, 1, 2026-08-30 01:59:50
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@630fb087]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e72f4e2] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1959341677 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT * FROM shop WHERE merchant_id = ? LIMIT 1
+==> Parameters: 1(Long)
+<==    Columns: id, merchant_id, name, logo, banner, intro, status, create_time
+<==        Row: 1, 1, 优选数码旗舰店, https://img.alicdn.com/logo.png, , 正品数码，七天无理由, 1, 2026-08-30 01:59:50
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e72f4e2]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@474a0a38] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@779498455 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@474a0a38]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42fc00f4] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1441847641 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ? AND g.status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42fc00f4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@573a5383] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1969426992 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND create_time >= CURRENT_DATE
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@573a5383]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@517fc9d6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1423719985 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(SUM(pay_amount), 0) FROM orders WHERE shop_id = ? AND status IN (1, 2, 3, 5)
+==> Parameters: 1(Long)
+<==    Columns: COALESCE(SUM(pay_amount), 0)
+<==        Row: 2963.00
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@517fc9d6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e80f063] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1637789980 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND status = ?
+==> Parameters: 1(Long), 0(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e80f063]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77464b34] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1041022551 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 3
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77464b34]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f583e44] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@176341872 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND status = ?
+==> Parameters: 1(Long), 2(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f583e44]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c02eea8] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@36068210 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM aftersale WHERE shop_id = ? AND status = 0
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c02eea8]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76bfc412] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1842549699 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COUNT(DISTINCT sk.goods_id) FROM sku sk JOIN goods g ON sk.goods_id = g.id WHERE g.shop_id = ? AND g.status = 1 AND sk.stock <= ?
+==> Parameters: 1(Long), 20(Integer)
+<==    Columns: COUNT(DISTINCT sk.goods_id)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76bfc412]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f97a7f3] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1290096932 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM shop WHERE merchant_id = ? LIMIT 1
+==> Parameters: 1(Long)
+<==    Columns: id, merchant_id, name, logo, banner, intro, status, create_time
+<==        Row: 1, 1, 优选数码旗舰店, https://img.alicdn.com/logo.png, , 正品数码，七天无理由, 1, 2026-08-30 01:59:50
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2f97a7f3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@513fe326] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1124433613 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@513fe326]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b0c798] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@674767547 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ? AND g.status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b0c798]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e2db120] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@513882490 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND create_time >= CURRENT_DATE
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e2db120]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@298b399e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1515989310 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(SUM(pay_amount), 0) FROM orders WHERE shop_id = ? AND status IN (1, 2, 3, 5)
+==> Parameters: 1(Long)
+<==    Columns: COALESCE(SUM(pay_amount), 0)
+<==        Row: 2963.00
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@298b399e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15f33738] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1707387857 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND status = ?
+==> Parameters: 1(Long), 0(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15f33738]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e04cf34] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@306344251 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 3
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e04cf34]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fa36d47] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1743152360 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND status = ?
+==> Parameters: 1(Long), 2(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fa36d47]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72748800] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@913902172 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM aftersale WHERE shop_id = ? AND status = 0
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72748800]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@641227be] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@846239668 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(DISTINCT sk.goods_id) FROM sku sk JOIN goods g ON sk.goods_id = g.id WHERE g.shop_id = ? AND g.status = 1 AND sk.stock <= ?
+==> Parameters: 1(Long), 20(Integer)
+<==    Columns: COUNT(DISTINCT sk.goods_id)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@641227be]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26e798fa] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2011683599 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT DATE(o.create_time) AS day, COUNT(DISTINCT o.id) AS orderCount, COALESCE(SUM(CASE WHEN o.status IN (1, 2, 3, 5) THEN o.pay_amount ELSE 0 END), 0) AS saleAmount, COALESCE(SUM(oi.quantity), 0) AS itemQty FROM orders o LEFT JOIN order_item oi ON oi.order_id = o.id WHERE o.shop_id = ? AND o.create_time >= DATE_SUB(CURDATE(), INTERVAL ? DAY) GROUP BY DATE(o.create_time) ORDER BY day
+==> Parameters: 1(Long), 7(Integer)
+<==    Columns: day, orderCount, saleAmount, itemQty
+<==        Row: 2026-08-27, 1, 199.00, 1
+<==        Row: 2026-08-28, 1, 298.00, 2
+<==        Row: 2026-08-29, 1, 874.00, 3
+<==        Row: 2026-08-30, 4, 1930.00, 9
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26e798fa]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8bf3782] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@310726183 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT status AS status, COUNT(*) AS cnt FROM orders WHERE shop_id = ? GROUP BY status
+==> Parameters: 1(Long)
+<==    Columns: status, cnt
+<==        Row: 1, 3
+<==        Row: 2, 1
+<==        Row: 5, 1
+<==        Row: 3, 4
+<==        Row: 4, 1
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8bf3782]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68303ca9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@423757066 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT oi.goods_id AS goodsId, oi.goods_name AS goodsName, SUM(oi.quantity) AS qty, COALESCE(SUM(oi.price * oi.quantity), 0) AS amount FROM order_item oi JOIN orders o ON oi.order_id = o.id WHERE o.shop_id = ? AND o.status IN (1, 2, 3, 5) GROUP BY oi.goods_id, oi.goods_name ORDER BY qty DESC LIMIT ?
+==> Parameters: 1(Long), 5(Integer)
+<==    Columns: goodsId, goodsName, qty, amount
+<==        Row: 1, 无线蓝牙耳机 Pro, 8, 1592.00
+<==        Row: 2, 智能手环 6代, 4, 596.00
+<==        Row: 3, 便携充电宝 20000mAh, 3, 297.00
+<==        Row: 4, 机械键盘 87键, 2, 518.00
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68303ca9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64befd91] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@218251483 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT c.id AS categoryId, COALESCE(c.name, '未分类') AS categoryName, COALESCE(SUM(oi.price * oi.quantity), 0) AS amount FROM order_item oi JOIN orders o ON oi.order_id = o.id JOIN goods g ON oi.goods_id = g.id LEFT JOIN category c ON g.category_id = c.id WHERE o.shop_id = ? AND o.status IN (1, 2, 3, 5) GROUP BY c.id, c.name
+==> Parameters: 1(Long)
+<==    Columns: categoryId, categoryName, amount
+<==        Row: 6, 手机, 518.00
+<==        Row: 1, 数码家电, 2485.00
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@64befd91]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5119cfc7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1113121280 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN 1 ELSE 0 END), 0) AS paid, COALESCE(SUM(CASE WHEN status IN (2, 3) THEN 1 ELSE 0 END), 0) AS shipped, COALESCE(SUM(CASE WHEN status = 3 THEN 1 ELSE 0 END), 0) AS finished, COALESCE(AVG(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount END), 0) AS avgPay, COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount ELSE 0 END), 0) AS saleAmount FROM orders WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: paid, shipped, finished, avgPay, saleAmount
+<==        Row: 9, 5, 4, 329.222222, 2963.00
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5119cfc7]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@525cb3da] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1302608289 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(AVG(rating), 0) AS avgRating, COALESCE(SUM(CASE WHEN rating >= 4 THEN 1 ELSE 0 END), 0) AS positiveCount, COUNT(*) AS total FROM review WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: avgRating, positiveCount, total
+<==        Row: 4.5000, 2, 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@525cb3da]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@edcc6c4] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@959014566 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@edcc6c4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5116af63] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@957659491 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ? AND g.status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5116af63]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a473945] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@674958605 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a473945]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f85fa36] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@209418642 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f85fa36]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41908c9c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@733163582 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT DATE(o.create_time) AS day, COUNT(DISTINCT o.id) AS orderCount, COALESCE(SUM(CASE WHEN o.status IN (1, 2, 3, 5) THEN o.pay_amount ELSE 0 END), 0) AS saleAmount, COALESCE(SUM(oi.quantity), 0) AS itemQty FROM orders o LEFT JOIN order_item oi ON oi.order_id = o.id WHERE o.shop_id = ? AND o.create_time >= DATE_SUB(CURDATE(), INTERVAL ? DAY) GROUP BY DATE(o.create_time) ORDER BY day
+==> Parameters: 1(Long), 7(Integer)
+<==    Columns: day, orderCount, saleAmount, itemQty
+<==        Row: 2026-08-27, 1, 199.00, 1
+<==        Row: 2026-08-28, 1, 298.00, 2
+<==        Row: 2026-08-29, 1, 874.00, 3
+<==        Row: 2026-08-30, 4, 1930.00, 9
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41908c9c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67000aa4] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1166779973 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT status AS status, COUNT(*) AS cnt FROM orders WHERE shop_id = ? GROUP BY status
+==> Parameters: 1(Long)
+<==    Columns: status, cnt
+<==        Row: 1, 3
+<==        Row: 2, 1
+<==        Row: 5, 1
+<==        Row: 3, 4
+<==        Row: 4, 1
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67000aa4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ca47974] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1796605806 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT oi.goods_id AS goodsId, oi.goods_name AS goodsName, SUM(oi.quantity) AS qty, COALESCE(SUM(oi.price * oi.quantity), 0) AS amount FROM order_item oi JOIN orders o ON oi.order_id = o.id WHERE o.shop_id = ? AND o.status IN (1, 2, 3, 5) GROUP BY oi.goods_id, oi.goods_name ORDER BY qty DESC LIMIT ?
+==> Parameters: 1(Long), 5(Integer)
+<==    Columns: goodsId, goodsName, qty, amount
+<==        Row: 1, 无线蓝牙耳机 Pro, 8, 1592.00
+<==        Row: 2, 智能手环 6代, 4, 596.00
+<==        Row: 3, 便携充电宝 20000mAh, 3, 297.00
+<==        Row: 4, 机械键盘 87键, 2, 518.00
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ca47974]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@23392a96] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@209291356 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT c.id AS categoryId, COALESCE(c.name, '未分类') AS categoryName, COALESCE(SUM(oi.price * oi.quantity), 0) AS amount FROM order_item oi JOIN orders o ON oi.order_id = o.id JOIN goods g ON oi.goods_id = g.id LEFT JOIN category c ON g.category_id = c.id WHERE o.shop_id = ? AND o.status IN (1, 2, 3, 5) GROUP BY c.id, c.name
+==> Parameters: 1(Long)
+<==    Columns: categoryId, categoryName, amount
+<==        Row: 6, 手机, 518.00
+<==        Row: 1, 数码家电, 2485.00
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@23392a96]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d9c15f9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2006708550 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN 1 ELSE 0 END), 0) AS paid, COALESCE(SUM(CASE WHEN status IN (2, 3) THEN 1 ELSE 0 END), 0) AS shipped, COALESCE(SUM(CASE WHEN status = 3 THEN 1 ELSE 0 END), 0) AS finished, COALESCE(AVG(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount END), 0) AS avgPay, COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount ELSE 0 END), 0) AS saleAmount FROM orders WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: paid, shipped, finished, avgPay, saleAmount
+<==        Row: 9, 5, 4, 329.222222, 2963.00
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d9c15f9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e582824] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1662436811 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(AVG(rating), 0) AS avgRating, COALESCE(SUM(CASE WHEN rating >= 4 THEN 1 ELSE 0 END), 0) AS positiveCount, COUNT(*) AS total FROM review WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: avgRating, positiveCount, total
+<==        Row: 4.5000, 2, 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e582824]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7999a07e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@643804769 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7999a07e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40679ecd] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1959349487 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ? AND g.status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@40679ecd]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d98b872] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@219983293 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d98b872]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d6937b9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@407342120 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT DATE(o.create_time) AS day, COUNT(DISTINCT o.id) AS orderCount, COALESCE(SUM(CASE WHEN o.status IN (1, 2, 3, 5) THEN o.pay_amount ELSE 0 END), 0) AS saleAmount, COALESCE(SUM(oi.quantity), 0) AS itemQty FROM orders o LEFT JOIN order_item oi ON oi.order_id = o.id WHERE o.shop_id = ? AND o.create_time >= DATE_SUB(CURDATE(), INTERVAL ? DAY) GROUP BY DATE(o.create_time) ORDER BY day
+==> Parameters: 1(Long), 7(Integer)
+<==    Columns: day, orderCount, saleAmount, itemQty
+<==        Row: 2026-08-27, 1, 199.00, 1
+<==        Row: 2026-08-28, 1, 298.00, 2
+<==        Row: 2026-08-29, 1, 874.00, 3
+<==        Row: 2026-08-30, 4, 1930.00, 9
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d6937b9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48906092] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2087736006 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT status AS status, COUNT(*) AS cnt FROM orders WHERE shop_id = ? GROUP BY status
+==> Parameters: 1(Long)
+<==    Columns: status, cnt
+<==        Row: 1, 3
+<==        Row: 2, 1
+<==        Row: 5, 1
+<==        Row: 3, 4
+<==        Row: 4, 1
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48906092]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3df436fc] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1982551328 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT oi.goods_id AS goodsId, oi.goods_name AS goodsName, SUM(oi.quantity) AS qty, COALESCE(SUM(oi.price * oi.quantity), 0) AS amount FROM order_item oi JOIN orders o ON oi.order_id = o.id WHERE o.shop_id = ? AND o.status IN (1, 2, 3, 5) GROUP BY oi.goods_id, oi.goods_name ORDER BY qty DESC LIMIT ?
+==> Parameters: 1(Long), 5(Integer)
+<==    Columns: goodsId, goodsName, qty, amount
+<==        Row: 1, 无线蓝牙耳机 Pro, 8, 1592.00
+<==        Row: 2, 智能手环 6代, 4, 596.00
+<==        Row: 3, 便携充电宝 20000mAh, 3, 297.00
+<==        Row: 4, 机械键盘 87键, 2, 518.00
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3df436fc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45b1d63c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1500404640 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT c.id AS categoryId, COALESCE(c.name, '未分类') AS categoryName, COALESCE(SUM(oi.price * oi.quantity), 0) AS amount FROM order_item oi JOIN orders o ON oi.order_id = o.id JOIN goods g ON oi.goods_id = g.id LEFT JOIN category c ON g.category_id = c.id WHERE o.shop_id = ? AND o.status IN (1, 2, 3, 5) GROUP BY c.id, c.name
+==> Parameters: 1(Long)
+<==    Columns: categoryId, categoryName, amount
+<==        Row: 6, 手机, 518.00
+<==        Row: 1, 数码家电, 2485.00
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45b1d63c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@631f17d6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@676609471 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN 1 ELSE 0 END), 0) AS paid, COALESCE(SUM(CASE WHEN status IN (2, 3) THEN 1 ELSE 0 END), 0) AS shipped, COALESCE(SUM(CASE WHEN status = 3 THEN 1 ELSE 0 END), 0) AS finished, COALESCE(AVG(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount END), 0) AS avgPay, COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount ELSE 0 END), 0) AS saleAmount FROM orders WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: paid, shipped, finished, avgPay, saleAmount
+<==        Row: 9, 5, 4, 329.222222, 2963.00
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@631f17d6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72426888] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1777889457 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(AVG(rating), 0) AS avgRating, COALESCE(SUM(CASE WHEN rating >= 4 THEN 1 ELSE 0 END), 0) AS positiveCount, COUNT(*) AS total FROM review WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: avgRating, positiveCount, total
+<==        Row: 4.5000, 2, 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72426888]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5637303] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1686396175 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5637303]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6eb4ab49] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1884370679 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ? AND g.status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6eb4ab49]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@646924b9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2091539310 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@646924b9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@65a6705d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@479879911 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock FROM goods g JOIN shop s ON g.shop_id = s.id LEFT JOIN sku sk ON g.id = sk.goods_id WHERE g.shop_id = ? GROUP BY g.id ORDER BY g.create_time DESC LIMIT ?, ?
+==> Parameters: 1(Long), 0(Integer), 10(Integer)
+<==    Columns: id, shop_id, category_id, name, subtitle, main_image, images, detail, price, sales, status, create_time, shop_name, stock
+<==        Row: 1, 1, 1, 无线蓝牙耳机 Pro, 主动降噪 / 30小时续航, https://picsum.photos/seed/g1/600/600, <<BLOB>>, <<BLOB>>, 199.00, 328, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 212
+<==        Row: 2, 1, 1, 智能手环 6代, 血氧监测 / 14天续航, https://picsum.photos/seed/g2/600/600, <<BLOB>>, <<BLOB>>, 149.00, 561, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 229
+<==        Row: 3, 1, 1, 便携充电宝 20000mAh, 22.5W快充 / 大容量, https://picsum.photos/seed/g3/600/600, <<BLOB>>, <<BLOB>>, 99.00, 890, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 200
+<==        Row: 4, 1, 6, 机械键盘 87键, 热插拔轴体 / RGB背光, https://picsum.photos/seed/g4/600/600, <<BLOB>>, <<BLOB>>, 259.00, 211, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 119
+<==        Row: 5, 1, 1, 新品智能音箱 Mini, 小身材大音量，语音控制, https://picsum.photos/seed/g5/600/600, <<BLOB>>, <<BLOB>>, 129.00, 0, 4, 2026-08-30 01:59:50, 优选数码旗舰店, 160
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@65a6705d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1abc7ff4] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1288618086 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1abc7ff4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62b827b5] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@779839493 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT o.*, s.name AS shop_name FROM orders o LEFT JOIN shop s ON o.shop_id = s.id WHERE o.shop_id = ? ORDER BY o.create_time DESC LIMIT ?, ?
+==> Parameters: 1(Long), 0(Integer), 10(Integer)
+<==    Columns: id, order_no, user_id, shop_id, total_amount, freight, discount, pay_amount, addr_snapshot, coupon_id, remark, status, pay_time, ship_time, finish_time, create_time, shop_name
+<==        Row: 12, 202608301723439598, 2, 1, 259.00, 0.00, 20.00, 239.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, 1, , 1, 2026-08-30 17:23:46, null, null, 2026-08-30 17:23:43, 优选数码旗舰店
+<==        Row: 9, 202608301708466925, 2, 1, 348.00, 0.00, 0.00, 348.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, null, , 1, 2026-08-30 17:08:55, null, null, 2026-08-30 17:08:46, 优选数码旗舰店
+<==        Row: 8, 202608301259363449, 3, 1, 199.00, 0.00, 0.00, 199.00, ?? 13800000000 ?????????????100?, null, ??, 4, null, null, null, 2026-08-30 12:59:36, 优选数码旗舰店
+<==        Row: 7, 202608301158174668, 2, 1, 995.00, 0.00, 0.00, 995.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, null, , 3, 2026-08-30 11:58:47, 2026-08-30 12:00:21, 2026-08-30 12:00:35, 2026-08-30 11:58:17, 优选数码旗舰店
+<==        Row: 1, M2026080001, 1, 1, 457.00, 0.00, 20.00, 437.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, 请尽快发货, 1, 2026-08-30 01:59:50, null, null, 2026-08-29 23:59:50, 优选数码旗舰店
+<==        Row: 3, M2026080003, 1, 1, 298.00, 0.00, 0.00, 298.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, 手环送去退换, 5, 2026-08-29 01:59:50, 2026-08-30 01:59:50, null, 2026-08-28 23:59:50, 优选数码旗舰店
+<==        Row: 2, M2026080002, 1, 1, 199.00, 0.00, 0.00, 199.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 2, 2026-08-28 01:59:50, 2026-08-29 01:59:50, null, 2026-08-27 22:59:50, 优选数码旗舰店
+<==        Row: 4, M2026080004, 1, 1, 99.00, 0.00, 0.00, 99.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-08-20 01:59:50, 2026-08-21 01:59:50, 2026-08-22 01:59:50, 2026-08-20 01:59:50, 优选数码旗舰店
+<==        Row: 5, M2026080005, 1, 1, 149.00, 0.00, 0.00, 149.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-08-10 01:59:50, 2026-08-11 01:59:50, 2026-08-12 01:59:50, 2026-08-10 01:59:50, 优选数码旗舰店
+<==        Row: 6, M2026080006, 1, 1, 199.00, 0.00, 0.00, 199.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-07-31 01:59:50, 2026-08-01 01:59:50, 2026-08-02 01:59:50, 2026-07-31 01:59:50, 优选数码旗舰店
+<==      Total: 10
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62b827b5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@294a71c2] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1595936483 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 12(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 14, 12, 4, 机械键盘 87键, 6, 轴体:红轴, https://picsum.photos/seed/g4/600/600, 259.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@294a71c2]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c3bfeb5] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@906318481 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 9(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 10, 9, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 1, 0
+<==        Row: 11, 9, 2, 智能手环 6代, 3, 颜色:曜石黑, https://picsum.photos/seed/g2/600/600, 149.00, 1, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c3bfeb5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@740764a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@337505857 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 8(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 9, 8, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@740764a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9b1330a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@222815824 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 7(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 8, 7, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 5, 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9b1330a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b7233e3] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2077976292 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 1, 1, 4, 机械键盘 87键, 6, 轴体:红轴, https://picsum.photos/seed/g4r/100/100, 259.00, 1, 0
+<==        Row: 2, 1, 3, 便携充电宝 20000mAh, 5, 颜色:白色, https://picsum.photos/seed/g3w/100/100, 99.00, 2, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b7233e3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2450c453] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1322718737 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 3(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 4, 3, 2, 智能手环 6代, 3, 颜色:曜石黑, https://picsum.photos/seed/g2b/100/100, 149.00, 2, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2450c453]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4478d321] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1713956257 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 2(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 3, 2, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1w/100/100, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4478d321]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@233a4f68] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@567898613 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 4(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 5, 4, 3, 便携充电宝 20000mAh, 5, 颜色:白色, https://picsum.photos/seed/g3w/100/100, 99.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@233a4f68]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@581beb3e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@699121242 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 5(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 6, 5, 2, 智能手环 6代, 4, 颜色:星空蓝, https://picsum.photos/seed/g2s/100/100, 149.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@581beb3e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fea302e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@682589430 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 6(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 7, 6, 1, 无线蓝牙耳机 Pro, 2, 颜色:黑色, https://picsum.photos/seed/g1b/100/100, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fea302e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@264ddc28] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1490609039 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@264ddc28]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@da7fdb7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@833943712 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM aftersale WHERE shop_id = ? ORDER BY create_time DESC LIMIT ?, ?
+==> Parameters: 1(Long), 0(Integer), 10(Integer)
+<==    Columns: id, order_id, order_no, user_id, shop_id, type, reason, refund_amount, images, status, reply, create_time, handle_time
+<==        Row: 1, 3, M2026080003, 1, 1, 2, 手环心率测量不准，申请退货退款, 298.00, <<BLOB>>, 0, null, 2026-08-30 01:59:50, null
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@da7fdb7]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d879d2a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@260019560 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM aftersale WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d879d2a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36db3621] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@662677792 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT r.*, g.name AS goodsName, u.nickname FROM review r LEFT JOIN goods g ON r.goods_id = g.id LEFT JOIN user u ON r.user_id = u.id WHERE r.shop_id = ? ORDER BY r.create_time DESC LIMIT ?, ?
+==> Parameters: 1(Long), 0(Integer), 10(Integer)
+<==    Columns: id, user_id, order_item_id, goods_id, shop_id, rating, content, images, reply, create_time, goodsName, nickname
+<==        Row: 2, 2, 8, 1, 1, 4, 蓝牙耳机接受信号不错！, <<BLOB>>, 感谢支持信任, 2026-08-30 15:46:50, 无线蓝牙耳机 Pro, admin
+<==        Row: 1, 1, 5, 3, 1, 5, 充电宝容量实在，发货也快，非常满意！
+
+【追评】用了两周，续航依然给力
+
+【追评】再次追评，推荐购买, <<BLOB>>, 感谢亲的认可，欢迎再次光临！, 2026-08-30 01:59:50, 便携充电宝 20000mAh, ????¤???°???
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36db3621]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49b59316] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@640736831 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM review WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49b59316]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c23007d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1647713526 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT o.*, s.name AS shop_name FROM orders o LEFT JOIN shop s ON o.shop_id = s.id WHERE o.shop_id = ? ORDER BY o.create_time DESC LIMIT ?, ?
+==> Parameters: 1(Long), 0(Integer), 10(Integer)
+<==    Columns: id, order_no, user_id, shop_id, total_amount, freight, discount, pay_amount, addr_snapshot, coupon_id, remark, status, pay_time, ship_time, finish_time, create_time, shop_name
+<==        Row: 12, 202608301723439598, 2, 1, 259.00, 0.00, 20.00, 239.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, 1, , 1, 2026-08-30 17:23:46, null, null, 2026-08-30 17:23:43, 优选数码旗舰店
+<==        Row: 9, 202608301708466925, 2, 1, 348.00, 0.00, 0.00, 348.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, null, , 1, 2026-08-30 17:08:55, null, null, 2026-08-30 17:08:46, 优选数码旗舰店
+<==        Row: 8, 202608301259363449, 3, 1, 199.00, 0.00, 0.00, 199.00, ?? 13800000000 ?????????????100?, null, ??, 4, null, null, null, 2026-08-30 12:59:36, 优选数码旗舰店
+<==        Row: 7, 202608301158174668, 2, 1, 995.00, 0.00, 0.00, 995.00, 李先森 19047917875 江西省南昌市东湖区北京西路437号, null, , 3, 2026-08-30 11:58:47, 2026-08-30 12:00:21, 2026-08-30 12:00:35, 2026-08-30 11:58:17, 优选数码旗舰店
+<==        Row: 1, M2026080001, 1, 1, 457.00, 0.00, 20.00, 437.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, 请尽快发货, 1, 2026-08-30 01:59:50, null, null, 2026-08-29 23:59:50, 优选数码旗舰店
+<==        Row: 3, M2026080003, 1, 1, 298.00, 0.00, 0.00, 298.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, 手环送去退换, 5, 2026-08-29 01:59:50, 2026-08-30 01:59:50, null, 2026-08-28 23:59:50, 优选数码旗舰店
+<==        Row: 2, M2026080002, 1, 1, 199.00, 0.00, 0.00, 199.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 2, 2026-08-28 01:59:50, 2026-08-29 01:59:50, null, 2026-08-27 22:59:50, 优选数码旗舰店
+<==        Row: 4, M2026080004, 1, 1, 99.00, 0.00, 0.00, 99.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-08-20 01:59:50, 2026-08-21 01:59:50, 2026-08-22 01:59:50, 2026-08-20 01:59:50, 优选数码旗舰店
+<==        Row: 5, M2026080005, 1, 1, 149.00, 0.00, 0.00, 149.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-08-10 01:59:50, 2026-08-11 01:59:50, 2026-08-12 01:59:50, 2026-08-10 01:59:50, 优选数码旗舰店
+<==        Row: 6, M2026080006, 1, 1, 199.00, 0.00, 0.00, 199.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-07-31 01:59:50, 2026-08-01 01:59:50, 2026-08-02 01:59:50, 2026-07-31 01:59:50, 优选数码旗舰店
+<==      Total: 10
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c23007d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3894e4c7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1548761920 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 12(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 14, 12, 4, 机械键盘 87键, 6, 轴体:红轴, https://picsum.photos/seed/g4/600/600, 259.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3894e4c7]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d407094] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1928135463 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 9(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 10, 9, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 1, 0
+<==        Row: 11, 9, 2, 智能手环 6代, 3, 颜色:曜石黑, https://picsum.photos/seed/g2/600/600, 149.00, 1, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d407094]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b915bab] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1438337181 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 8(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 9, 8, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b915bab]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35f5ea69] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@67679103 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 7(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 8, 7, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1/600/600, 199.00, 5, 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35f5ea69]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6827fca7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1922819432 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 1, 1, 4, 机械键盘 87键, 6, 轴体:红轴, https://picsum.photos/seed/g4r/100/100, 259.00, 1, 0
+<==        Row: 2, 1, 3, 便携充电宝 20000mAh, 5, 颜色:白色, https://picsum.photos/seed/g3w/100/100, 99.00, 2, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6827fca7]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f1b5f51] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@672028369 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 3(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 4, 3, 2, 智能手环 6代, 3, 颜色:曜石黑, https://picsum.photos/seed/g2b/100/100, 149.00, 2, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f1b5f51]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f384cfb] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1518106010 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 2(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 3, 2, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1w/100/100, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7f384cfb]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f22957a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@583032305 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 4(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 5, 4, 3, 便携充电宝 20000mAh, 5, 颜色:白色, https://picsum.photos/seed/g3w/100/100, 99.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f22957a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b81aff1] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1610837694 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 5(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 6, 5, 2, 智能手环 6代, 4, 颜色:星空蓝, https://picsum.photos/seed/g2s/100/100, 149.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b81aff1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1293c191] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1946884629 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 6(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 7, 6, 1, 无线蓝牙耳机 Pro, 2, 颜色:黑色, https://picsum.photos/seed/g1b/100/100, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1293c191]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2beafd86] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@670645795 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 10
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2beafd86]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f3721cf] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1461776751 wrapping com.mysql.cj.jdbc.ConnectionImpl@a8c9a52] will not be managed by Spring
+==>  Preparing: SELECT * FROM shop WHERE merchant_id = ? LIMIT 1
+==> Parameters: 1(Long)
+<==    Columns: id, merchant_id, name, logo, banner, intro, status, create_time
+<==        Row: 1, 1, 优选数码旗舰店, https://img.alicdn.com/logo.png, , 正品数码，七天无理由, 1, 2026-08-30 01:59:50
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f3721cf]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49067e96] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1021087711 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock FROM goods g JOIN shop s ON g.shop_id = s.id LEFT JOIN sku sk ON g.id = sk.goods_id WHERE g.shop_id = ? GROUP BY g.id ORDER BY g.create_time DESC LIMIT ?, ?
+==> Parameters: 1(Long), 0(Integer), 10(Integer)
+<==    Columns: id, shop_id, category_id, name, subtitle, main_image, images, detail, price, sales, status, create_time, shop_name, stock
+<==        Row: 1, 1, 1, 无线蓝牙耳机 Pro, 主动降噪 / 30小时续航, https://picsum.photos/seed/g1/600/600, <<BLOB>>, <<BLOB>>, 199.00, 328, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 212
+<==        Row: 2, 1, 1, 智能手环 6代, 血氧监测 / 14天续航, https://picsum.photos/seed/g2/600/600, <<BLOB>>, <<BLOB>>, 149.00, 561, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 229
+<==        Row: 3, 1, 1, 便携充电宝 20000mAh, 22.5W快充 / 大容量, https://picsum.photos/seed/g3/600/600, <<BLOB>>, <<BLOB>>, 99.00, 890, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 200
+<==        Row: 4, 1, 6, 机械键盘 87键, 热插拔轴体 / RGB背光, https://picsum.photos/seed/g4/600/600, <<BLOB>>, <<BLOB>>, 259.00, 211, 1, 2026-08-30 01:59:50, 优选数码旗舰店, 119
+<==        Row: 5, 1, 1, 新品智能音箱 Mini, 小身材大音量，语音控制, https://picsum.photos/seed/g5/600/600, <<BLOB>>, <<BLOB>>, 129.00, 0, 4, 2026-08-30 01:59:50, 优选数码旗舰店, 160
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49067e96]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c6674ef] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@384718139 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c6674ef]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7faab86c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@463695181 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT DATE(o.create_time) AS day, COUNT(DISTINCT o.id) AS orderCount, COALESCE(SUM(CASE WHEN o.status IN (1, 2, 3, 5) THEN o.pay_amount ELSE 0 END), 0) AS saleAmount, COALESCE(SUM(oi.quantity), 0) AS itemQty FROM orders o LEFT JOIN order_item oi ON oi.order_id = o.id WHERE o.shop_id = ? AND o.create_time >= DATE_SUB(CURDATE(), INTERVAL ? DAY) GROUP BY DATE(o.create_time) ORDER BY day
+==> Parameters: 1(Long), 7(Integer)
+<==    Columns: day, orderCount, saleAmount, itemQty
+<==        Row: 2026-08-27, 1, 199.00, 1
+<==        Row: 2026-08-28, 1, 298.00, 2
+<==        Row: 2026-08-29, 1, 874.00, 3
+<==        Row: 2026-08-30, 4, 1930.00, 9
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7faab86c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ba3a3ca] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@836768010 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT status AS status, COUNT(*) AS cnt FROM orders WHERE shop_id = ? GROUP BY status
+==> Parameters: 1(Long)
+<==    Columns: status, cnt
+<==        Row: 1, 3
+<==        Row: 2, 1
+<==        Row: 5, 1
+<==        Row: 3, 4
+<==        Row: 4, 1
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ba3a3ca]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36c97268] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@812788360 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT oi.goods_id AS goodsId, oi.goods_name AS goodsName, SUM(oi.quantity) AS qty, COALESCE(SUM(oi.price * oi.quantity), 0) AS amount FROM order_item oi JOIN orders o ON oi.order_id = o.id WHERE o.shop_id = ? AND o.status IN (1, 2, 3, 5) GROUP BY oi.goods_id, oi.goods_name ORDER BY qty DESC LIMIT ?
+==> Parameters: 1(Long), 5(Integer)
+<==    Columns: goodsId, goodsName, qty, amount
+<==        Row: 1, 无线蓝牙耳机 Pro, 8, 1592.00
+<==        Row: 2, 智能手环 6代, 4, 596.00
+<==        Row: 3, 便携充电宝 20000mAh, 3, 297.00
+<==        Row: 4, 机械键盘 87键, 2, 518.00
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36c97268]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ea6dcbd] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@50441011 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT c.id AS categoryId, COALESCE(c.name, '未分类') AS categoryName, COALESCE(SUM(oi.price * oi.quantity), 0) AS amount FROM order_item oi JOIN orders o ON oi.order_id = o.id JOIN goods g ON oi.goods_id = g.id LEFT JOIN category c ON g.category_id = c.id WHERE o.shop_id = ? AND o.status IN (1, 2, 3, 5) GROUP BY c.id, c.name
+==> Parameters: 1(Long)
+<==    Columns: categoryId, categoryName, amount
+<==        Row: 6, 手机, 518.00
+<==        Row: 1, 数码家电, 2485.00
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ea6dcbd]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b5a1b41] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@869364643 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN 1 ELSE 0 END), 0) AS paid, COALESCE(SUM(CASE WHEN status IN (2, 3) THEN 1 ELSE 0 END), 0) AS shipped, COALESCE(SUM(CASE WHEN status = 3 THEN 1 ELSE 0 END), 0) AS finished, COALESCE(AVG(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount END), 0) AS avgPay, COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount ELSE 0 END), 0) AS saleAmount FROM orders WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: paid, shipped, finished, avgPay, saleAmount
+<==        Row: 9, 5, 4, 329.222222, 2963.00
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b5a1b41]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28a94db7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@50519024 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(AVG(rating), 0) AS avgRating, COALESCE(SUM(CASE WHEN rating >= 4 THEN 1 ELSE 0 END), 0) AS positiveCount, COUNT(*) AS total FROM review WHERE shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: avgRating, positiveCount, total
+<==        Row: 4.5000, 2, 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28a94db7]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e824c29] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1545890491 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e824c29]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45f4c6cd] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1773877598 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ? AND g.status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45f4c6cd]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c90ff45] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@821924332 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM shop WHERE merchant_id = ? LIMIT 1
+==> Parameters: 1(Long)
+<==    Columns: id, merchant_id, name, logo, banner, intro, status, create_time
+<==        Row: 1, 1, 优选数码旗舰店, https://img.alicdn.com/logo.png, , 正品数码，七天无理由, 1, 2026-08-30 01:59:50
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c90ff45]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@57cfb714] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@476975231 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ?
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@57cfb714]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2622c192] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@218080597 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.shop_id = ? AND g.status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2622c192]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24fd8255] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@350480649 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND create_time >= CURRENT_DATE
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@24fd8255]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70a69261] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@939608330 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(SUM(pay_amount), 0) FROM orders WHERE shop_id = ? AND status IN (1, 2, 3, 5)
+==> Parameters: 1(Long)
+<==    Columns: COALESCE(SUM(pay_amount), 0)
+<==        Row: 2963.00
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70a69261]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fa44040] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@727052879 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND status = ?
+==> Parameters: 1(Long), 0(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fa44040]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@201374e5] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1836615399 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND status = ?
+==> Parameters: 1(Long), 1(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 3
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@201374e5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5405b8b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1053799322 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE shop_id = ? AND status = ?
+==> Parameters: 1(Long), 2(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5405b8b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2011f6dc] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@663387478 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM aftersale WHERE shop_id = ? AND status = 0
+==> Parameters: 1(Long)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2011f6dc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3946d142] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@382625696 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT COUNT(DISTINCT sk.goods_id) FROM sku sk JOIN goods g ON sk.goods_id = g.id WHERE g.shop_id = ? AND g.status = 1 AND sk.stock <= ?
+==> Parameters: 1(Long), 20(Integer)
+<==    Columns: COUNT(DISTINCT sk.goods_id)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3946d142]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2961473a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@67170883 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2961473a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25e3e6b6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@102247847 wrapping com.mysql.cj.jdbc.ConnectionImpl@12255bfe] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25e3e6b6]

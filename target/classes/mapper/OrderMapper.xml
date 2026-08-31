@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecommerce.mapper.OrderMapper">
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO orders (order_no, user_id, shop_id, total_amount, freight, discount, pay_amount,
+                            addr_snapshot, coupon_id, remark, status)
+        VALUES (#{orderNo}, #{userId}, #{shopId}, #{totalAmount}, #{freight}, #{discount}, #{payAmount},
+                #{addrSnapshot}, #{couponId}, #{remark}, #{status})
+    </insert>
+
+    <select id="selectById" resultType="Order">
+        SELECT * FROM orders WHERE id = #{id}
+    </select>
+
+    <select id="selectFullById" resultType="Order">
+        SELECT o.*, s.name AS shop_name
+        FROM orders o LEFT JOIN shop s ON o.shop_id = s.id
+        WHERE o.id = #{id} AND o.user_id = #{userId}
+    </select>
+
+    <select id="selectPageByUser" resultType="Order">
+        SELECT o.*, s.name AS shop_name
+        FROM orders o LEFT JOIN shop s ON o.shop_id = s.id
+        WHERE o.user_id = #{userId}
+        <if test="status != null">
+            <choose>
+                <when test="status == 0">AND o.status = 0</when>
+                <when test="status == 1">AND o.status = 1</when>
+                <when test="status == 2">AND o.status = 2</when>
+                <when test="status == 3">AND o.status = 3</when>
+                <when test="status == 4">AND o.status IN (4)</when>
+                <when test="status == 5">AND o.status = 5</when>
+            </choose>
+        </if>
+        ORDER BY o.create_time DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="countByUser" resultType="long">
+        SELECT COUNT(*) FROM orders WHERE user_id = #{userId}
+        <if test="status != null">
+            AND status = #{status}
+        </if>
+    </select>
+
+    <update id="updateStatus">
+        UPDATE orders
+        SET status = #{toStatus}
+        <if test="toStatus == 1">, pay_time = NOW()</if>
+        <if test="toStatus == 3">, finish_time = NOW()</if>
+        WHERE id = #{id} AND status = #{fromStatus} AND user_id = #{userId}
+    </update>
+
+    <select id="selectTimeoutOrders" resultType="Order">
+        SELECT * FROM orders
+        WHERE status = 0 AND create_time &lt; NOW() - INTERVAL #{timeoutMin} MINUTE
+    </select>
+
+    <update id="cancelTimeoutOrder">
+        UPDATE orders SET status = 4 WHERE id = #{id} AND status = 0
+    </update>
+
+    <select id="selectPageByShop" resultType="Order">
+        SELECT o.*, s.name AS shop_name
+        FROM orders o LEFT JOIN shop s ON o.shop_id = s.id
+        WHERE o.shop_id = #{shopId}
+        <if test="status != null">
+            AND o.status = #{status}
+        </if>
+        ORDER BY o.create_time DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="countByShop" resultType="long">
+        SELECT COUNT(*) FROM orders WHERE shop_id = #{shopId}
+        <if test="status != null">
+            AND status = #{status}
+        </if>
+    </select>
+
+    <update id="ship">
+        UPDATE orders SET status = 2, ship_time = NOW()
+        WHERE id = #{id} AND shop_id = #{shopId} AND status = 1
+    </update>
+
+    <update id="updateStatusByShop">
+        UPDATE orders SET status = #{toStatus}
+        WHERE id = #{id} AND shop_id = #{shopId} AND status = #{fromStatus}
+    </update>
+
+    <select id="countTodayByShop" resultType="int">
+        SELECT COUNT(*) FROM orders
+        WHERE shop_id = #{shopId} AND create_time &gt;= CURRENT_DATE
+    </select>
+
+    <select id="sumPaidByShop" resultType="long">
+        SELECT COALESCE(SUM(pay_amount), 0) FROM orders
+        WHERE shop_id = #{shopId} AND status IN (1, 2, 3, 5)
+    </select>
+
+    <select id="selectAllPage" resultType="Order">
+        SELECT o.*, s.name AS shop_name
+        FROM orders o LEFT JOIN shop s ON o.shop_id = s.id
+        <where>
+            <if test="orderNo != null and orderNo != ''">AND o.order_no LIKE CONCAT('%', #{orderNo}, '%')</if>
+            <if test="status != null">AND o.status = #{status}</if>
+        </where>
+        ORDER BY o.create_time DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="countAllPage" resultType="long">
+        SELECT COUNT(*) FROM orders o
+        <where>
+            <if test="orderNo != null and orderNo != ''">AND o.order_no LIKE CONCAT('%', #{orderNo}, '%')</if>
+            <if test="status != null">AND o.status = #{status}</if>
+        </where>
+    </select>
+
+    <select id="countToday" resultType="int">
+        SELECT COUNT(*) FROM orders WHERE create_time &gt;= CURRENT_DATE
+    </select>
+
+    <select id="sumPaid" resultType="long">
+        SELECT COALESCE(SUM(pay_amount), 0) FROM orders WHERE status IN (1, 2, 3, 5)
+    </select>
+
+    <select id="select7DayTrend" resultType="map">
+        SELECT DATE(create_time) AS day,
+               COUNT(*) AS orderCount,
+               COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount ELSE 0 END), 0) AS saleAmount
+        FROM orders
+        WHERE create_time &gt;= DATE_SUB(CURDATE(), INTERVAL #{days} DAY)
+        GROUP BY DATE(create_time)
+        ORDER BY day
+    </select>
+
+    <select id="selectStatusDist" resultType="map">
+        SELECT status AS status, COUNT(*) AS cnt
+        FROM orders
+        GROUP BY status
+    </select>
+
+    <select id="selectTrendByShop" resultType="map">
+        SELECT DATE(o.create_time) AS day,
+               COUNT(DISTINCT o.id) AS orderCount,
+               COALESCE(SUM(CASE WHEN o.status IN (1, 2, 3, 5) THEN o.pay_amount ELSE 0 END), 0) AS saleAmount,
+               COALESCE(SUM(oi.quantity), 0) AS itemQty
+        FROM orders o
+        LEFT JOIN order_item oi ON oi.order_id = o.id
+        WHERE o.shop_id = #{shopId} AND o.create_time &gt;= DATE_SUB(CURDATE(), INTERVAL #{days} DAY)
+        GROUP BY DATE(o.create_time)
+        ORDER BY day
+    </select>
+
+    <select id="selectStatusDistByShop" resultType="map">
+        SELECT status AS status, COUNT(*) AS cnt
+        FROM orders
+        WHERE shop_id = #{shopId}
+        GROUP BY status
+    </select>
+
+    <select id="selectStatsByShop" resultType="map">
+        SELECT
+            COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN 1 ELSE 0 END), 0) AS paid,
+            COALESCE(SUM(CASE WHEN status IN (2, 3) THEN 1 ELSE 0 END), 0) AS shipped,
+            COALESCE(SUM(CASE WHEN status = 3 THEN 1 ELSE 0 END), 0) AS finished,
+            COALESCE(AVG(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount END), 0) AS avgPay,
+            COALESCE(SUM(CASE WHEN status IN (1, 2, 3, 5) THEN pay_amount ELSE 0 END), 0) AS saleAmount
+        FROM orders
+        WHERE shop_id = #{shopId}
+    </select>
+</mapper>

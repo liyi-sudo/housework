@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ecommerce.mapper.GoodsMapper">
+
+    <sql id="page_where">
+        <where>
+            g.status = 1
+            <if test="keyword != null and keyword != ''">
+                AND (g.name LIKE CONCAT('%', #{keyword}, '%') OR g.subtitle LIKE CONCAT('%', #{keyword}, '%'))
+            </if>
+            <if test="categoryId != null">
+                AND (g.category_id = #{categoryId}
+                     OR g.category_id IN (SELECT id FROM category WHERE parent_id = #{categoryId}))
+            </if>
+        </where>
+    </sql>
+
+    <select id="selectPage" resultMap="GoodsCard">
+        SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock
+        FROM goods g
+        JOIN shop s ON g.shop_id = s.id
+        LEFT JOIN sku sk ON g.id = sk.goods_id
+        <include refid="page_where"/>
+        GROUP BY g.id
+        <choose>
+            <when test="sort == 'sales'">ORDER BY g.sales DESC</when>
+            <when test="sort == 'price_asc'">ORDER BY g.price ASC</when>
+            <when test="sort == 'price_desc'">ORDER BY g.price DESC</when>
+            <otherwise>ORDER BY g.create_time DESC</otherwise>
+        </choose>
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="countPage" resultType="long">
+        SELECT COUNT(*) FROM goods g
+        <include refid="page_where"/>
+    </select>
+
+    <select id="selectById" resultMap="GoodsCard">
+        SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock
+        FROM goods g
+        JOIN shop s ON g.shop_id = s.id
+        LEFT JOIN sku sk ON g.id = sk.goods_id
+        WHERE g.id = #{id}
+        GROUP BY g.id
+    </select>
+
+    <select id="selectDetail" resultType="Goods">
+        SELECT * FROM goods WHERE id = #{id}
+    </select>
+
+    <select id="selectByIds" resultMap="GoodsCard">
+        SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock
+        FROM goods g
+        JOIN shop s ON g.shop_id = s.id
+        LEFT JOIN sku sk ON g.id = sk.goods_id
+        WHERE g.id IN
+        <foreach collection="ids" item="id" open="(" separator="," close=")">#{id}</foreach>
+        GROUP BY g.id
+    </select>
+
+    <update id="addSales">
+        UPDATE goods SET sales = sales + #{n} WHERE id = #{goodsId}
+    </update>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO goods (shop_id, category_id, name, subtitle, main_image, images, detail, price, sales, status)
+        VALUES (#{shopId}, #{categoryId}, #{name}, #{subtitle}, #{mainImage}, #{images}, #{detail}, #{price}, 0, #{status})
+    </insert>
+
+    <update id="update">
+        UPDATE goods SET category_id = #{categoryId}, name = #{name}, subtitle = #{subtitle},
+               main_image = #{mainImage}, images = #{images}, detail = #{detail}, price = #{price}
+        WHERE id = #{id} AND shop_id = #{shopId}
+    </update>
+
+    <update id="updateStatus">
+        UPDATE goods SET status = #{status} WHERE id = #{id} AND shop_id = #{shopId}
+    </update>
+
+    <select id="selectByShop" resultMap="GoodsCard">
+        SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock
+        FROM goods g
+        JOIN shop s ON g.shop_id = s.id
+        LEFT JOIN sku sk ON g.id = sk.goods_id
+        WHERE g.shop_id = #{shopId}
+        <if test="keyword != null and keyword != ''">
+            AND (g.name LIKE CONCAT('%', #{keyword}, '%') OR g.subtitle LIKE CONCAT('%', #{keyword}, '%'))
+        </if>
+        <if test="status != null">
+            AND g.status = #{status}
+        </if>
+        GROUP BY g.id
+        ORDER BY g.create_time DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="countByShop" resultType="long">
+        SELECT COUNT(*) FROM goods g
+        WHERE g.shop_id = #{shopId}
+        <if test="keyword != null and keyword != ''">
+            AND (g.name LIKE CONCAT('%', #{keyword}, '%') OR g.subtitle LIKE CONCAT('%', #{keyword}, '%'))
+        </if>
+        <if test="status != null">
+            AND g.status = #{status}
+        </if>
+    </select>
+
+    <resultMap id="GoodsCard" type="Goods" autoMapping="true">
+        <id property="id" column="id"/>
+        <result property="shopName" column="shop_name"/>
+        <result property="stock" column="stock"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+    <update id="updateAdminStatus">
+        UPDATE goods SET status = #{status} WHERE id = #{id}
+    </update>
+
+    <select id="selectAllPage" resultMap="GoodsCard">
+        SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock
+        FROM goods g
+        JOIN shop s ON g.shop_id = s.id
+        LEFT JOIN sku sk ON g.id = sk.goods_id
+        <where>
+            <if test="keyword != null and keyword != ''">
+                AND (g.name LIKE CONCAT('%', #{keyword}, '%') OR g.subtitle LIKE CONCAT('%', #{keyword}, '%'))
+            </if>
+            <if test="status != null">AND g.status = #{status}</if>
+        </where>
+        GROUP BY g.id
+        ORDER BY g.create_time DESC
+        LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="countAllPage" resultType="long">
+        SELECT COUNT(*) FROM goods g
+        <where>
+            <if test="keyword != null and keyword != ''">
+                AND (g.name LIKE CONCAT('%', #{keyword}, '%') OR g.subtitle LIKE CONCAT('%', #{keyword}, '%'))
+            </if>
+            <if test="status != null">AND g.status = #{status}</if>
+        </where>
+    </select>
+</mapper>

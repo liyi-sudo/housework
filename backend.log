@@ -1,0 +1,908 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.ecommerce:ecommerce-platform >------------------
+[INFO] Building ecommerce-platform 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.5:run (default-cli) > test-compile @ ecommerce-platform >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ ecommerce-platform ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 23 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ ecommerce-platform ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ ecommerce-platform ---
+[INFO] skip non existing resourceDirectory D:\homework\研0\高级程序设计\大作业\process\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ ecommerce-platform ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ ecommerce-platform <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.5:run (default-cli) @ ecommerce-platform ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-08-30T01:12:04.961+08:00  INFO 32288 --- [ecommerce-platform] [           main] com.ecommerce.EcommerceApplication       : Starting EcommerceApplication using Java 17.0.20.1 with PID 32288 (D:\homework\研0\高级程序设计\大作业\process\target\classes started by JXGM in D:\homework\研0\高级程序设计\大作业\process)
+2026-08-30T01:12:04.962+08:00 DEBUG 32288 --- [ecommerce-platform] [           main] com.ecommerce.EcommerceApplication       : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-08-30T01:12:04.963+08:00  INFO 32288 --- [ecommerce-platform] [           main] com.ecommerce.EcommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-30T01:12:05.664+08:00  INFO 32288 --- [ecommerce-platform] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-08-30T01:12:05.674+08:00  INFO 32288 --- [ecommerce-platform] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-30T01:12:05.675+08:00  INFO 32288 --- [ecommerce-platform] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-08-30T01:12:05.732+08:00  INFO 32288 --- [ecommerce-platform] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-30T01:12:05.733+08:00  INFO 32288 --- [ecommerce-platform] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 739 ms
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+2026-08-30T01:12:06.309+08:00  INFO 32288 --- [ecommerce-platform] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-08-30T01:12:06.315+08:00  INFO 32288 --- [ecommerce-platform] [           main] com.ecommerce.EcommerceApplication       : Started EcommerceApplication in 1.636 seconds (process running for 1.855)
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27f1f] was not registered for synchronization because synchronization is not active
+2026-08-30T01:12:06.329+08:00  INFO 32288 --- [ecommerce-platform] [   scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-30T01:12:06.432+08:00  INFO 32288 --- [ecommerce-platform] [   scheduling-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d060d0a
+2026-08-30T01:12:06.433+08:00  INFO 32288 --- [ecommerce-platform] [   scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+JDBC Connection [HikariProxyConnection@1126246317 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27f1f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52668864] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1439721066 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52668864]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@350f201f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1397537650 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@350f201f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c7f0777] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@817680191 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c7f0777]
+2026-08-30T01:17:08.689+08:00  WARN 32288 --- [ecommerce-platform] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m32s111ms738µs500ns).
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@488872a9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1288212592 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@488872a9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7780b336] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2081856085 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7780b336]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3510a7bf] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1199287080 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3510a7bf]
+2026-08-30T01:20:39.085+08:00  INFO 32288 --- [ecommerce-platform] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-30T01:20:39.085+08:00  INFO 32288 --- [ecommerce-platform] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-30T01:20:39.085+08:00  INFO 32288 --- [ecommerce-platform] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b09ef44] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@728001502 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM banner WHERE status = 1 ORDER BY sort ASC
+==> Parameters: 
+<==    Columns: id, image, link, sort, status
+<==        Row: 1, https://picsum.photos/seed/b1/1200/400, null, 1, 1
+<==        Row: 2, https://picsum.photos/seed/b2/1200/400, 1, 2, 1
+<==        Row: 3, https://picsum.photos/seed/b3/1200/400, null, 3, 1
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b09ef44]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@148c819d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2037184994 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM admin WHERE username = ?
+==> Parameters: admin(String)
+<==    Columns: id, username, password, nickname, status, create_time
+<==        Row: 1, admin, $2a$10$YJavCoqoX2i0wqoyMxdO6edlFnsq0Vmwd8uLFI0zThTeVW4v1QVrK, 超级管理员, 1, 2026-08-30 01:11:57
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@148c819d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ea83781] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2143708825 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: INSERT INTO login_log (username, user_type, client, ip, result, message) VALUES (?, ?, ?, ?, ?, ?)
+==> Parameters: admin(String), ADMIN(String), PC(String), 127.0.0.1(String), SUCCESS(String), 登录成功(String)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ea83781]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@133e1823] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1756459565 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM user
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@133e1823]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f5c1a79] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2146288139 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant m
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f5c1a79]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72832c5c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@302039378 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@72832c5c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@341bff98] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1071131581 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.status = ?
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@341bff98]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@530577c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@850116596 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant_apply a WHERE a.status = ?
+==> Parameters: 0(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@530577c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@57679e89] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@469941677 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders o
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 6
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@57679e89]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@692a66d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@840198793 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE create_time >= CURRENT_DATE
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@692a66d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4fa521e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2105170794 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(SUM(pay_amount), 0) FROM orders WHERE status IN (1, 2, 3, 5)
+==> Parameters: 
+<==    Columns: COALESCE(SUM(pay_amount), 0)
+<==        Row: 1381.00
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4fa521e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cb10395] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1879123161 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT m.*, s.name AS shop_name FROM merchant m LEFT JOIN shop s ON m.id = s.merchant_id ORDER BY m.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, account, password, contact_name, contact_phone, status, create_time, shop_name
+<==        Row: 1, merchant1, $2a$10$M9hRBeloKw73XZYun9s7eOuMXo6/AgCLxDgnQ3Q8tNqvl3ysdEv2u, 王掌柜, 13800000001, 1, 2026-08-30 01:11:57, 优选数码旗舰店
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6cb10395]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68ff1b9d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@295816631 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant m
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68ff1b9d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a1fab59] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@253574270 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT a.*, m.account AS merchant_account FROM merchant_apply a LEFT JOIN merchant m ON a.merchant_id = m.id ORDER BY a.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, merchant_id, shop_name, category_ids, contact_name, contact_phone, qualification, status, reason, create_time, audit_time, merchant_account
+<==        Row: 1, 1, 优选数码二店, 1,4, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 0, null, 2026-08-30 01:11:57, null, merchant1
+<==        Row: 2, 1, 优选数码旗舰店, 1,2,5, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 1, null, 2026-08-30 01:11:57, 2026-08-25 01:11:57, merchant1
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a1fab59]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12aeba95] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1803344058 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant_apply a
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12aeba95]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@56b6001] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1138021625 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT g.*, s.name AS shop_name, SUM(sk.stock) AS stock FROM goods g JOIN shop s ON g.shop_id = s.id LEFT JOIN sku sk ON g.id = sk.goods_id WHERE g.status = ? GROUP BY g.id ORDER BY g.create_time DESC LIMIT ?, ?
+==> Parameters: 3(Integer), 0(Integer), 10(Integer)
+<==    Columns: id, shop_id, category_id, name, subtitle, main_image, images, detail, price, sales, status, create_time, shop_name, stock
+<==        Row: 5, 1, 1, 新品智能音箱 Mini, 小身材大音量，语音控制, https://picsum.photos/seed/g5/600/600, <<BLOB>>, <<BLOB>>, 129.00, 0, 3, 2026-08-30 01:11:57, 优选数码旗舰店, 160
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@56b6001]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26305a97] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@389955492 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.status = ?
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26305a97]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b8ebab6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@192990541 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT o.*, s.name AS shop_name FROM orders o LEFT JOIN shop s ON o.shop_id = s.id ORDER BY o.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, order_no, user_id, shop_id, total_amount, freight, discount, pay_amount, addr_snapshot, coupon_id, remark, status, pay_time, ship_time, finish_time, create_time, shop_name
+<==        Row: 1, M2026080001, 1, 1, 457.00, 0.00, 20.00, 437.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, 请尽快发货, 1, 2026-08-30 01:11:57, null, null, 2026-08-29 23:11:57, 优选数码旗舰店
+<==        Row: 3, M2026080003, 1, 1, 298.00, 0.00, 0.00, 298.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, 手环送去退换, 5, 2026-08-29 01:11:57, 2026-08-30 01:11:57, null, 2026-08-28 23:11:57, 优选数码旗舰店
+<==        Row: 2, M2026080002, 1, 1, 199.00, 0.00, 0.00, 199.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 2, 2026-08-28 01:11:57, 2026-08-29 01:11:57, null, 2026-08-27 22:11:57, 优选数码旗舰店
+<==        Row: 4, M2026080004, 1, 1, 99.00, 0.00, 0.00, 99.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-08-20 01:11:57, 2026-08-21 01:11:57, 2026-08-22 01:11:57, 2026-08-20 01:11:57, 优选数码旗舰店
+<==        Row: 5, M2026080005, 1, 1, 149.00, 0.00, 0.00, 149.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-08-10 01:11:57, 2026-08-11 01:11:57, 2026-08-12 01:11:57, 2026-08-10 01:11:57, 优选数码旗舰店
+<==        Row: 6, M2026080006, 1, 1, 199.00, 0.00, 0.00, 199.00, 张同学 13800001111 广东省 深圳市 南山区 粤海街道科技园路1号, null, null, 3, 2026-07-31 01:11:57, 2026-08-01 01:11:57, 2026-08-02 01:11:57, 2026-07-31 01:11:57, 优选数码旗舰店
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b8ebab6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10d16166] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1125948647 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 1, 1, 4, 机械键盘 87键, 6, 轴体:红轴, https://picsum.photos/seed/g4r/100/100, 259.00, 1, 0
+<==        Row: 2, 1, 3, 便携充电宝 20000mAh, 5, 颜色:白色, https://picsum.photos/seed/g3w/100/100, 99.00, 2, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10d16166]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@700616dc] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1799853035 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 3(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 4, 3, 2, 智能手环 6代, 3, 颜色:曜石黑, https://picsum.photos/seed/g2b/100/100, 149.00, 2, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@700616dc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b7feff7] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2073013938 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 2(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 3, 2, 1, 无线蓝牙耳机 Pro, 1, 颜色:白色, https://picsum.photos/seed/g1w/100/100, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b7feff7]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e87e362] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1426180616 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 4(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 5, 4, 3, 便携充电宝 20000mAh, 5, 颜色:白色, https://picsum.photos/seed/g3w/100/100, 99.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e87e362]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33a05d9b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@878602977 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 5(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 6, 5, 2, 智能手环 6代, 4, 颜色:星空蓝, https://picsum.photos/seed/g2s/100/100, 149.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33a05d9b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e00385c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1878915714 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM order_item WHERE order_id = ?
+==> Parameters: 6(Long)
+<==    Columns: id, order_id, goods_id, goods_name, sku_id, sku_spec, cover_image, price, quantity, review_status
+<==        Row: 7, 6, 1, 无线蓝牙耳机 Pro, 2, 颜色:黑色, https://picsum.photos/seed/g1b/100/100, 199.00, 1, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5e00385c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d26c7f8] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@164002014 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders o
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 6
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d26c7f8]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ab3f0a2] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1068589456 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT p.*, u.nickname AS user_name FROM payment p LEFT JOIN user u ON p.user_id = u.id ORDER BY p.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, trade_no, order_id, user_id, amount, method, status, pay_time, create_time, user_name
+<==        Row: 1, T2026080001, 1, 1, 437.00, BALANCE, 1, 2026-08-29 23:11:57, 2026-08-30 01:11:57, 演示买家
+<==        Row: 2, T2026080002, 2, 1, 199.00, CARD, 1, 2026-08-28 01:11:57, 2026-08-30 01:11:57, 演示买家
+<==        Row: 3, T2026080003, 3, 1, 298.00, BALANCE, 1, 2026-08-29 01:11:57, 2026-08-30 01:11:57, 演示买家
+<==        Row: 4, T2026080004, 4, 1, 99.00, BALANCE, 1, 2026-08-20 01:11:57, 2026-08-30 01:11:57, 演示买家
+<==        Row: 5, T2026080005, 5, 1, 149.00, BALANCE, 1, 2026-08-10 01:11:57, 2026-08-30 01:11:57, 演示买家
+<==        Row: 6, T2026080006, 6, 1, 199.00, CARD, 1, 2026-07-31 01:11:57, 2026-08-30 01:11:57, 演示买家
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ab3f0a2]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b17cfcc] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1604230879 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM payment
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 6
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b17cfcc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62fe964] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1229704452 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM login_log ORDER BY create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, username, user_type, client, ip, result, message, create_time
+<==        Row: 1, admin, ADMIN, PC, 127.0.0.1, SUCCESS, 登录成功, 2026-08-30 01:20:46
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@62fe964]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67161a10] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@504085343 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM login_log
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67161a10]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43143189] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@102147983 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM user ORDER BY create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, phone, password, nickname, avatar, gender, openid, status, create_time, update_time
+<==        Row: 1, 13800001111, $2a$10$M9hRBeloKw73XZYun9s7eOuMXo6/AgCLxDgnQ3Q8tNqvl3ysdEv2u, 演示买家, null, 0, null, 1, 2026-08-30 01:11:57, 2026-08-30 01:11:57
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@43143189]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5520a734] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@510521826 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM user
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5520a734]
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a8a7fe]
+JDBC Connection [HikariProxyConnection@1173047099 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will be managed by Spring
+==>  Preparing: SELECT * FROM merchant_apply WHERE id = ?
+==> Parameters: 1(Long)
+<==    Columns: id, merchant_id, shop_name, category_ids, contact_name, contact_phone, qualification, status, reason, create_time, audit_time
+<==        Row: 1, 1, 优选数码二店, 1,4, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 0, null, 2026-08-30 01:11:57, null
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a8a7fe]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a8a7fe] from current transaction
+==>  Preparing: UPDATE merchant_apply SET status = ?, reason = ?, audit_time = NOW() WHERE id = ? AND status = 0
+==> Parameters: 1(Integer), ??????(String), 1(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a8a7fe]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a8a7fe] from current transaction
+==>  Preparing: UPDATE merchant SET status = ? WHERE id = ?
+==> Parameters: 1(Integer), 1(Long)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a8a7fe]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a8a7fe] from current transaction
+==>  Preparing: SELECT * FROM shop WHERE merchant_id = ? LIMIT 1
+==> Parameters: 1(Long)
+<==    Columns: id, merchant_id, name, logo, banner, intro, status, create_time
+<==        Row: 1, 1, 优选数码旗舰店, https://img.alicdn.com/logo.png, , 正品数码，七天无理由, 1, 2026-08-30 01:11:57
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a8a7fe]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a8a7fe]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a8a7fe]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@75a8a7fe]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f68080d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1034113410 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: UPDATE goods SET status = ? WHERE id = ?
+==> Parameters: 1(Integer), 5(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f68080d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4492291d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2119123293 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: UPDATE merchant SET status = ? WHERE id = ?
+==> Parameters: 2(Integer), 1(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4492291d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4212b1db] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@621793566 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: UPDATE merchant SET status = ? WHERE id = ?
+==> Parameters: 1(Integer), 1(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4212b1db]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@116fdd7d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1121391845 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: UPDATE user SET status = ? WHERE id = ?
+==> Parameters: 2(Integer), 1(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@116fdd7d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@354872d3] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@267578412 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT a.*, m.account AS merchant_account FROM merchant_apply a LEFT JOIN merchant m ON a.merchant_id = m.id ORDER BY a.create_time DESC LIMIT ?, ?
+==> Parameters: 0(Integer), 10(Integer)
+<==    Columns: id, merchant_id, shop_name, category_ids, contact_name, contact_phone, qualification, status, reason, create_time, audit_time, merchant_account
+<==        Row: 1, 1, 优选数码二店, 1,4, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 1, ??????, 2026-08-30 01:11:57, 2026-08-30 01:21:08, merchant1
+<==        Row: 2, 1, 优选数码旗舰店, 1,2,5, 王掌柜, 13800000001, 营业执照扫描件、法人身份证, 1, null, 2026-08-30 01:11:57, 2026-08-25 01:11:57, merchant1
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@354872d3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@526af523] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@608357207 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant_apply a
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@526af523]
+2026-08-30T01:21:08.160+08:00 ERROR 32288 --- [ecommerce-platform] [io-8080-exec-10] c.e.common.GlobalExceptionHandler        : 系统异常:
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/admin/goods/5.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.6.jar:6.1.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.6.jar:6.1.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@550d128f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1695574734 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@550d128f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ac73faf] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2003027218 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ac73faf]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bac076a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1491431415 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2bac076a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c30c179] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2003568322 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c30c179]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e1dcd29] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@882699930 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e1dcd29]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@dd23095] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1841746051 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@dd23095]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10a427d1] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@216984520 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10a427d1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@180b88c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@808160706 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@180b88c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c4d21bc] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@4046022 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c4d21bc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19e9861f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@205259871 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19e9861f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41ce76f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1368412301 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41ce76f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ecf73e0] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1837882057 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ecf73e0]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@16c61640] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1667446539 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@16c61640]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9c6ff63] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@798264333 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9c6ff63]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a268f15] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1420122325 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6a268f15]
+2026-08-30T01:36:13.895+08:00  WARN 32288 --- [ecommerce-platform] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s881ms242µs500ns).
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@237f652d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2105481328 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@237f652d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e20493c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1454244824 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@e20493c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44c5a639] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1210084916 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44c5a639]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@424e41d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1840869070 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@424e41d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78ea2330] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1531782204 wrapping com.mysql.cj.jdbc.ConnectionImpl@7d060d0a] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78ea2330]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44da4246] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1828719182 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44da4246]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@130a0820] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2125804149 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@130a0820]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74d81d41] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@928006386 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74d81d41]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c21be9d] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1210549837 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7c21be9d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@125c2366] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1668854502 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@125c2366]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42ca11f2] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@838753758 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42ca11f2]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a5a814c] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1485655156 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4a5a814c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35f374e6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@725468149 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35f374e6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7583036a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1534664056 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7583036a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9c819c4] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1681769412 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9c819c4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1bb2eb9f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1383974676 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1bb2eb9f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b7c9d30] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1201564115 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b7c9d30]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a08eae] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@748291831 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a08eae]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@594297d1] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1586538409 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@594297d1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bc4d53e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@116735880 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bc4d53e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@729471bd] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@529807348 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@729471bd]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@761fc21a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@668425469 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@761fc21a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b459877] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@859996695 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b459877]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70ba7833] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@632647160 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM admin WHERE username = ?
+==> Parameters: admin(String)
+<==    Columns: id, username, password, nickname, status, create_time
+<==        Row: 1, admin, $2a$10$YJavCoqoX2i0wqoyMxdO6edlFnsq0Vmwd8uLFI0zThTeVW4v1QVrK, 超级管理员, 1, 2026-08-30 01:11:57
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70ba7833]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@cb6f5c6] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@795766659 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: INSERT INTO login_log (username, user_type, client, ip, result, message) VALUES (?, ?, ?, ?, ?, ?)
+==> Parameters: admin(String), ADMIN(String), PC(String), 127.0.0.1(String), SUCCESS(String), 登录成功(String)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@cb6f5c6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2000b04b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@932254236 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2000b04b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c4e4bdd] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1258667494 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM admin WHERE username = ?
+==> Parameters: admin(String)
+<==    Columns: id, username, password, nickname, status, create_time
+<==        Row: 1, admin, $2a$10$YJavCoqoX2i0wqoyMxdO6edlFnsq0Vmwd8uLFI0zThTeVW4v1QVrK, 超级管理员, 1, 2026-08-30 01:59:50
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1c4e4bdd]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6bc35e79] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@861357426 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: INSERT INTO login_log (username, user_type, client, ip, result, message) VALUES (?, ?, ?, ?, ?, ?)
+==> Parameters: admin(String), ADMIN(String), PC(String), 127.0.0.1(String), SUCCESS(String), 登录成功(String)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6bc35e79]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70abf8f5] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@524310440 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM user
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@70abf8f5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41d85b18] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1847295878 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant m
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41d85b18]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@46c048cc] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1170463639 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 5
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@46c048cc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f029146] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@465577026 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM goods g WHERE g.status = ?
+==> Parameters: 3(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5f029146]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3bb15673] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1894934754 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM merchant_apply a WHERE a.status = ?
+==> Parameters: 0(Integer)
+<==    Columns: COUNT(*)
+<==        Row: 1
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3bb15673]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8b24c2e] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@964788613 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders o
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 6
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8b24c2e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6566be1f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2133810593 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT COUNT(*) FROM orders WHERE create_time >= CURRENT_DATE
+==> Parameters: 
+<==    Columns: COUNT(*)
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6566be1f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2a79c226] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@2059339568 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT COALESCE(SUM(pay_amount), 0) FROM orders WHERE status IN (1, 2, 3, 5)
+==> Parameters: 
+<==    Columns: COALESCE(SUM(pay_amount), 0)
+<==        Row: 1381.00
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2a79c226]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@46dc2059] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1669026337 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@46dc2059]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ff4d09f] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1208871888 wrapping com.mysql.cj.jdbc.ConnectionImpl@5fdebf16] will not be managed by Spring
+==>  Preparing: SELECT * FROM orders WHERE status = 0 AND create_time < NOW() - INTERVAL ? MINUTE
+==> Parameters: 30(Integer)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ff4d09f]
